@@ -1462,7 +1462,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e792478794d98345b27b562fc6acb67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addTerrain: 1
+  force: 10
+  range: 25
+  maxReachDistance: 9
+  forceOverDistance:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   world: {fileID: 1126342014}
+  playerCamera: {fileID: 656058512}
 --- !u!65 &656058509
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1528,13 +1557,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656058507}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 86.09629, y: 92, z: 157.1}
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 76.97, y: 120.4, z: 56.55}
+  m_LocalScale: {x: 29.3765, y: 33.898785, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &666904265
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3151,11 +3180,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robot
       objectReference: {fileID: 0}
-    - target: {fileID: 9111962883125049612, guid: 3b6ad063af86b2843ab8654845f91703,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 3b6ad063af86b2843ab8654845f91703,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3222,6 +3246,11 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -2324271141525611035, guid: 3b6ad063af86b2843ab8654845f91703,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9111962883125049612, guid: 3b6ad063af86b2843ab8654845f91703,
         type: 3}
       propertyPath: m_Layer
       value: 10
