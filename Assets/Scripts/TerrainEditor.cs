@@ -64,6 +64,7 @@ public class TerrainEditor : MonoBehaviour
             }
 
             EditTerrain(hitPoint, addTerrain, force, range);
+            // point, false, 2,2
         }
     }
 
@@ -101,6 +102,7 @@ public class TerrainEditor : MonoBehaviour
                     newDensity = newDensity.Clamp01();
 
                     world.SetDensity(newDensity, offsetX, offsetY, offsetZ, true, _initChunks);
+                   
                 }
             }
         }

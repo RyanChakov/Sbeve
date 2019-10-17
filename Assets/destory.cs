@@ -8,7 +8,7 @@ public class destory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        world.SetDensity(0, 0, 0, 0, true, null);
+        world.SetDensity(0, 90, 100, 90, true, null);
     }
 
     // Update is called once per frame
