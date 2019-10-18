@@ -67,6 +67,7 @@
     <Compile Include="Assets\Libraries\FastNoise\FastNoise.cs" />
     <Compile Include="Assets\moving.cs" />
     <Compile Include="Assets\Scripts\Chunk.cs" />
+    <Compile Include="Assets\Scripts\DayNight.cs" />
     <Compile Include="Assets\Scripts\DensityGenerator.cs" />
     <Compile Include="Assets\Scripts\LookupTables.cs" />
     <Compile Include="Assets\Scripts\MarchingCubes.cs" />
