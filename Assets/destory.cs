@@ -55,7 +55,7 @@ public class destory : MonoBehaviour
 
             if (addTerrain)
             {
-                Collider[] hits = Physics.OverlapBox(hitPoint, new Vector3(5,5,5));
+                Collider[] hits = Physics.OverlapBox(hitPoint, new Vector3(1,1,1));
                 for (int i = 0; i < hits.Length; i++)
                 {
                     if (hits[i].CompareTag("Player"))
@@ -80,7 +80,8 @@ public class destory : MonoBehaviour
         int hitZ = point.z.Round();
         
         int intRange = range.Ceil();
-        for (int y = -intRange; y <= intRange; y++)
+        int yDeepForClearCastleLobby = -3; //Hard Coded Variable to Clear the lobby of the castle, from cube asset
+        for (int y = yDeepForClearCastleLobby; y <= intRange; y++)
         {
             int offsetY = hitY + y;
 
