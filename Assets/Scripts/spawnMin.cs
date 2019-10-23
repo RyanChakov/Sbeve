@@ -4,11 +4,32 @@ using UnityEngine;
 
 public class spawnMin : MonoBehaviour
 {
-    public GameObject amber,amethyst,aquamarine,coal,copper,emerald,garnet,gold,lapis,obsidian,pearl,ruby,smoky;
+    public GameObject amber,amethyst,aquamarine,coal,copper,emerald,garnet,gold,lapis,obsidian,pearl,ruby,smoky,building1,building2,building3;
     // Start is called before the first frame update
     void Start()
     {
-        for(int q=0; q<50; q++)
+        for (int q = 0; q < 5; q++)
+        {
+            int x = Random.Range(0, 200);
+           
+            int z = Random.Range(0, 200);
+            Instantiate(building1, new Vector3(x, 114, z), Quaternion.identity);
+        }
+        for (int q = 0; q < 10; q++)
+        {
+            int x = Random.Range(0, 200);
+          
+            int z = Random.Range(0, 200);
+            Instantiate(building2, new Vector3(x, 113, z), Quaternion.identity);
+        }
+        for (int q = 0; q < 20; q++)
+        {
+            int x = Random.Range(0, 200);
+           
+            int z = Random.Range(0, 200);
+            Instantiate(building3, new Vector3(x, 114, z), Quaternion.identity);
+        }
+        for (int q=0; q<50; q++)
         {
             int x= Random.Range(0, 200);
             int y = Random.Range(0, 50);
