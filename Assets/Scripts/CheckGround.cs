@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class CheckGround : MonoBehaviour
 {
+    const int DISAPEAR_DIST = 5;
     RaycastHit hit = new RaycastHit();
-    float timer = 2f,time=0;
+    RaycastHit hit1 = new RaycastHit();
+    float timer = 3f,time=0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,19 +17,20 @@ public class CheckGround : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(time>timer)
-        { 
+        Vector3 ned = new Vector3(transform.position.x, transform.position.y + DISAPEAR_DIST, transform.position.z);
+        Debug.DrawRay(ned, transform.TransformDirection(Vector3.down) * 2*DISAPEAR_DIST, Color.blue);
+        if (time > timer)
+        {
             LayerMask mask = LayerMask.GetMask("Ground");
 
 
-            if ((!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 1f)))
+            if (!Physics.Raycast(ned, transform.TransformDirection(Vector3.down), out hit1, 2*DISAPEAR_DIST, mask))
             {
+               
+
                 Destroy(gameObject);
             }
-            else if ((!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, 1f)))
-            {
-                Destroy(gameObject);
-            }
+           
         }
         else
         {

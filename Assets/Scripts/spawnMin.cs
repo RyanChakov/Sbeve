@@ -20,7 +20,7 @@ public class spawnMin : MonoBehaviour
             int x = Random.Range(0, 200);
           
             int z = Random.Range(0, 200);
-            Instantiate(building2, new Vector3(x, 113, z), Quaternion.identity);
+            Instantiate(building2, new Vector3(x, 116, z), Quaternion.identity);
         }
         for (int q = 0; q < 20; q++)
         {
