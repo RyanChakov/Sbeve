@@ -665,19 +665,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amber: {fileID: 8331804088834318027, guid: 5d411ac5c800d0849859e8a71b18ad43, type: 3}
-  amethyst: {fileID: 8331804088834318027, guid: 060d6c981cbce6943b1e869a0cea7f6b,
+  amethyst: {fileID: 1531079249113860065, guid: e4e066c0bcda5c146b19c9e0f7d5e766,
     type: 3}
-  aquamarine: {fileID: 8331804088834318027, guid: bf030c8b4e8c4d44aac562e28f138159,
+  aquamarine: {fileID: 4398446579319452083, guid: bf030c8b4e8c4d44aac562e28f138159,
     type: 3}
   coal: {fileID: 8331804088834318027, guid: 68017d98a730e02488dc763f6929fbfe, type: 3}
   copper: {fileID: 494305340361568450, guid: cee8fe26f9c051a43b44c6f42e3de523, type: 3}
-  emerald: {fileID: 8331804088834318027, guid: 3bb90f9baf64983458fcd4df67359ce9, type: 3}
+  emerald: {fileID: 5366521001425234009, guid: 3bb90f9baf64983458fcd4df67359ce9, type: 3}
   garnet: {fileID: 8331804088834318027, guid: 2a9b77a0fac749d4bae67ad8e54f4fd9, type: 3}
   gold: {fileID: 3570844142629564874, guid: bb5e2244cc410a54a98da772494a2d11, type: 3}
-  lapis: {fileID: 494305340361568450, guid: 75e1711874ec2e447b8df41f51f4f259, type: 3}
-  obsidian: {fileID: 494305340361568450, guid: 414b0f1490779c641bfee6ae833d6542, type: 3}
+  lapis: {fileID: 3693393803988534619, guid: 75e1711874ec2e447b8df41f51f4f259, type: 3}
+  obsidian: {fileID: 3358341118757512254, guid: 414b0f1490779c641bfee6ae833d6542,
+    type: 3}
   pearl: {fileID: 494305340361568450, guid: 25ef0f75a86044a4fa8c1087fbb634c4, type: 3}
-  ruby: {fileID: 494305340361568450, guid: b2e87319280be4c4eadda03c9495d788, type: 3}
+  ruby: {fileID: 2433234262209540555, guid: b2e87319280be4c4eadda03c9495d788, type: 3}
   smoky: {fileID: 494305340361568450, guid: 506df14511863e143b07283548832fbf, type: 3}
   building1: {fileID: 8498051998808443281, guid: 4a4d0b915a20c3242a37a5ec5aaf33b0,
     type: 3}
