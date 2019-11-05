@@ -4,13 +4,14 @@ using System.Collections;
 public class moving : MonoBehaviour
 {
     //Variables
-    public float speed = 6.0F;
+    public float speedF = 6.0F;
     public float jumpSpeed = 8.0F;
     public float gravity = 20.0F;
     private Vector3 moveDirection = Vector3.zero;
 
     void Update()
     {
+        float speed = speedF;
         CharacterController controller = GetComponent<CharacterController>();
         // is the controller on the ground?
         if (controller.isGrounded)
@@ -23,12 +24,12 @@ public class moving : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
             {
                
-                speed =10f;
+                speed =speedF*1.5f;
             }
             else if(!Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.RightShift))
             {
                 
-                speed = 6f;
+                speed = speedF;
             }
             
             moveDirection *= speed;

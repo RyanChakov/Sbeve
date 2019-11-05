@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class spawnMin : MonoBehaviour
 {
-    public GameObject amber,amethyst,aquamarine,coal,copper,emerald,garnet,gold,lapis,obsidian,pearl,ruby,smoky,building1,building2,building3;
+    public GameObject amber,amethyst,aquamarine,coal,copper,emerald,garnet,gold,lapis,obsidian,pearl,ruby,smoky,building1,building2,building3,dungeon;
     // Start is called before the first frame update
     void Start()
     {
+      
+            int xx = Random.Range(0, 200);
+            int yy = Random.Range(0, 100);
+            int zz = Random.Range(0, 200);
+            Instantiate(dungeon, new Vector3(xx, yy, zz), Quaternion.identity);
+        
         for (int q = 0; q < 5; q++)
         {
             int x = Random.Range(0, 200);
