@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9991b6265f7f87d43b7e3c676739f203, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -451,8 +451,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -3.1913835e+15, y: 2.837738e+26, z: 1.2147233e-10,
-    w: 95710370}
+  m_BoundingSphereOverride: {x: 1.4346e-41, y: -2.986443e+25, z: 8.93e-43, w: -3.064471e+25}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1012,9 +1011,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b37d5da8407c86d46b1d0bc1ad769d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
-  jumpSpeed: 80
-  gravity: 20
+  speedF: 6
+  jumpSpeed: 10
+  gravity: 16
 --- !u!1001 &405036538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3125,6 +3124,7 @@ GameObject:
   - component: {fileID: 1242900676}
   - component: {fileID: 1242900675}
   - component: {fileID: 1242900674}
+  - component: {fileID: 1242900678}
   m_Layer: 0
   m_Name: SUN
   m_TagString: Untagged
@@ -3205,6 +3205,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1242900678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242900673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8db5e9c4d1c4113429b778244edc9588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sky1: {fileID: 2100000, guid: 493bfb50af5d9424da505ba945c86600, type: 2}
+  sky2: {fileID: 0}
+  sky3: {fileID: 0}
+  sky4: {fileID: 0}
+  sky5: {fileID: 0}
+  sky6: {fileID: 0}
+  sky7: {fileID: 0}
+  sky8: {fileID: 0}
+  sky:
+  - {fileID: 2100000, guid: 9991b6265f7f87d43b7e3c676739f203, type: 2}
+  - {fileID: 2100000, guid: 0b846be1b116429409a7669cacf2a62e, type: 2}
+  - {fileID: 2100000, guid: 3e56423e1fe71f94ea97f5bb2004a7e6, type: 2}
+  - {fileID: 2100000, guid: 1cf32c17fea93ef4fb120e8e0cdfbef1, type: 2}
+  - {fileID: 2100000, guid: ac2eeb98f1b423941b373f537bc56e18, type: 2}
+  - {fileID: 2100000, guid: 82b660520bdecce4daf45d270ec93fe4, type: 2}
+  - {fileID: 2100000, guid: 493bfb50af5d9424da505ba945c86600, type: 2}
+  - {fileID: 2100000, guid: 97637a2a763b7f24b8da4e139e4144ca, type: 2}
+  cycleT: 2
+  timer: 0
+  slow: 0
+  timercount: 1
 --- !u!1 &1267486665 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2534866581884222612, guid: b32539fe9d257a848a69f5d0c183ab72,
