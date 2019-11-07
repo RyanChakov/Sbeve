@@ -34,7 +34,7 @@ public class CheckGround : MonoBehaviour
         }
         else
         {
-            print(time);
+
             time += Time.deltaTime;
         }
     }

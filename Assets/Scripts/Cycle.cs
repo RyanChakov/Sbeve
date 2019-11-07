@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Cycle : MonoBehaviour
 {
-    public Material sky1, sky2, sky3, sky4, sky5, sky6, sky7, sky8;
+    public Light sun;
     public Material[] sky;
-    public float cycleT = 16f, timer,slow;
+    public float cycleT = 16f, timer,slow=0, slows = 0;
     public int timercount=0;
     // Start is called before the first frame update
     void Start()
@@ -17,22 +17,53 @@ public class Cycle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer > cycleT)
+        
+        sky[timercount].SetFloat("_Blend", Mathf.Lerp(0, 1, slow));
+         slow += 0.1f * Time.deltaTime;
+
+        if(sky[timercount].GetFloat("_Blend")==1)
         {
-            RenderSettings.skybox = sky[timercount];
             timercount++;
-            if(timercount==8)
+            slow = 0;
+            slows = 0;
+          
+            if(timercount ==8)
             {
-                timercount = 0;
+                timercount =0;
             }
-            timer = 0;
         }
-        else
+        RenderSettings.skybox = sky[timercount];
+
+
+        switch (timercount)
         {
-           
-            sky[timercount].SetFloat("_Blend", Mathf.Lerp(0, 1, Time.deltaTime));
-            print(sky[timercount].GetFloat("_Blend"));
-            timer += Time.deltaTime;
+            case 0: sun.intensity = Mathf.Lerp(.5f, 1, slows);
+                RenderSettings.ambientIntensity = Mathf.Lerp(.4f, .7f,slows);
+                break;
+            case 1: sun.intensity = Mathf.Lerp(1f, 1.5f, slows);
+                RenderSettings.ambientIntensity = Mathf.Lerp(.7f, .1f,slows);
+                break;
+            case 2: sun.intensity = Mathf.Lerp(1.5f, 1f, slows);
+                RenderSettings.ambientIntensity = Mathf.Lerp(1f, .7f,slows);
+                break;
+            case 3: sun.intensity = Mathf.Lerp(1f, .8f, slows);
+                RenderSettings.ambientIntensity = Mathf.Lerp(.7f, .5f, slows);
+                break;
+            case 4: sun.intensity = Mathf.Lerp(.8f, .5f, slows);
+                RenderSettings.ambientIntensity = Mathf.Lerp(.5f, .3f, slows);
+                break;
+            case 5: sun.intensity = Mathf.Lerp(.5f, .3f, slows);
+                RenderSettings.ambientIntensity = Mathf.Lerp(.3f, .2f, slows);
+                break;
+            case 6: sun.intensity = Mathf.Lerp(.3f, .1f, slows);
+                RenderSettings.ambientIntensity = Mathf.Lerp(.2f, 0f, slows);
+                break;
+            case 7: sun.intensity = Mathf.Lerp(.1f, .5f, slows);
+                RenderSettings.ambientIntensity = Mathf.Lerp(0, .4f, slows);
+                break;
         }
+        print(sun.intensity);
+        slows += 0.05f * Time.deltaTime;
+      
     }
 }
