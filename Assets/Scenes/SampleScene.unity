@@ -2843,6 +2843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1126342013}
   - component: {fileID: 1126342014}
+  - component: {fileID: 1126342015}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -2882,6 +2883,27 @@ MonoBehaviour:
   worldDepth: 10
   isolevel: 0.5
   seed: 3391
+  chunkPrefab: {fileID: 7489232383384105734, guid: 58c1dc75b64dbec41a572954c3bcd523,
+    type: 3}
+--- !u!114 &1126342015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126342012}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a37899ac8533374c828dcfa953a1e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wr: {fileID: 1126342014}
+  chunkSize: 30
+  worldWidth: 10
+  worldHeight: 10
+  worldDepth: 10
+  isolevel: 0.5
+  seed: 3396
   chunkPrefab: {fileID: 7489232383384105734, guid: 58c1dc75b64dbec41a572954c3bcd523,
     type: 3}
 --- !u!1001 &1160092962

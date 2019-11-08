@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class World : MonoBehaviour
+public class proc : MonoBehaviour
 {
+    public World wr;
     public int chunkSize = 8;
 
     public int worldWidth = 5;
@@ -30,23 +31,26 @@ public class World : MonoBehaviour
     {
         Gizmos.DrawWireCube(worldBounds.center, worldBounds.size);
     }
-    
-    private void Start()
+
+    private void Update()
     {
+        if(Input.GetKeyDown(KeyCode.L))
+        { 
         worldBounds = new Bounds();
         UpdateBounds();
 
-        chunks = new Dictionary<Vector3Int, Chunk>(worldWidth*worldHeight*worldDepth);;
+        chunks = new Dictionary<Vector3Int, Chunk>(worldWidth * worldHeight * worldDepth); ;
         CreateChunks();
+        }
     }
 
     private void CreateChunks()
     {
-        for (int x = 0; x < worldWidth; x++)
+        for (int x = worldWidth; x < worldWidth+5; x++)
         {
-            for (int y = 0; y < worldHeight; y++)
+            for (int y = worldHeight; y < worldHeight+5; y++)
             {
-                for (int z = 0; z < worldDepth; z++)
+                for (int z = worldDepth; z < worldDepth+5; z++)
                 {
                     CreateChunk(x * chunkSize, y * chunkSize, z * chunkSize);
                 }
@@ -107,13 +111,13 @@ public class World : MonoBehaviour
             }
 
             Chunk chunk = GetChunk(chunkPos);
-            
+
             lastChunkPos = chunk.position;
 
             Vector3Int localPos = (dp - chunk.position).Mod(chunkSize + 1);
 
             chunk.SetDensity(density, localPos);
-            if (setReadyForUpdate) 
+            if (setReadyForUpdate)
                 chunk.readyForUpdate = true;
         }
     }
@@ -125,16 +129,16 @@ public class World : MonoBehaviour
 
     private void UpdateBounds()
     {
-        float middleX = worldWidth * chunkSize / 2f;
-        float middleY = worldHeight * chunkSize / 2f;
-        float middleZ = worldDepth * chunkSize / 2f;
-        
+        float middleX = worldWidth+5 * chunkSize / 2f;
+        float middleY = worldHeight+5 * chunkSize / 2f;
+        float middleZ = worldDepth+5 * chunkSize / 2f;
+
         Vector3 midPos = new Vector3(middleX, middleY, middleZ);
 
         Vector3Int size = new Vector3Int(
-            worldWidth * chunkSize,
-            worldHeight * chunkSize,
-            worldDepth * chunkSize);
+            worldWidth+5 * chunkSize,
+            worldHeight+5 * chunkSize,
+            worldDepth+5 * chunkSize);
 
         worldBounds.center = midPos;
         worldBounds.size = size;
@@ -155,7 +159,7 @@ public class World : MonoBehaviour
         Vector3Int position = new Vector3Int(x, y, z);
 
         Chunk chunk = Instantiate(chunkPrefab, position, Quaternion.identity).GetComponent<Chunk>();
-        chunk.Initialize(this, chunkSize, position);
+        chunk.Initialize(wr, chunkSize, position);
         chunks.Add(position, chunk);
     }
 }

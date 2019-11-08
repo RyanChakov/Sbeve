@@ -62,7 +62,7 @@ public class Cycle : MonoBehaviour
                 RenderSettings.ambientIntensity = Mathf.Lerp(0, .4f, slows);
                 break;
         }
-        print(sun.intensity);
+
         slows += 0.05f * Time.deltaTime;
       
     }

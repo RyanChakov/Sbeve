@@ -35,7 +35,7 @@ public class destory : MonoBehaviour
 
     private void TryEditTerrain()
     {
-        print("HERE1");
+
         RaycastToTerrain(!addTerrain);
         
     }
