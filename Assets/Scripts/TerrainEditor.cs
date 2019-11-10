@@ -88,9 +88,9 @@ public class TerrainEditor : MonoBehaviour
                     int offsetY = hitY - y;
                     int offsetZ = hitZ - z;
 
-                    if (!world.IsPointInsideWorld(offsetX, offsetY, offsetZ))
+                   /* if (!world.IsPointInsideWorld(offsetX, offsetY, offsetZ))
                         continue;
-
+                        */
                     float distance = Utils.Distance(offsetX, offsetY, offsetZ, point);
                     if (!(distance <= range)) continue;
                     

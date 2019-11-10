@@ -27,20 +27,20 @@ public class destory : MonoBehaviour
     {
         if(runs<=1)
         { 
-        TryEditTerrain();
+        TryEditTerrain1();
         }
         runs++;
 
     }
 
-    private void TryEditTerrain()
+    private void TryEditTerrain1()
     {
 
-        RaycastToTerrain(!addTerrain);
+        RaycastToTerrain1(!addTerrain);
         
     }
 
-    private void RaycastToTerrain(bool addTerrain)
+    private void RaycastToTerrain1(bool addTerrain)
     {
         Vector3 startP = playerCamera.position;
         Vector3 destP = startP + playerCamera.forward;
@@ -65,13 +65,13 @@ public class destory : MonoBehaviour
                 }
             }
 
-            EditTerrain(hitPoint, addTerrain, force, range);
+            EditTerrain1(hitPoint, addTerrain, force, range);
             // point, false, 2,2
             
         }
     }
 
-    private void EditTerrain(Vector3 point, bool addTerrain, float force, float range)
+    private void EditTerrain1(Vector3 point, bool addTerrain, float force, float range)
     {
         int buildModifier = addTerrain ? 1 : -1;
 

@@ -4,7 +4,7 @@ using UnityEngine;
 public class World : MonoBehaviour
 {
     public int chunkSize = 8;
-
+    public GameObject ParentChunk;
     public int worldWidth = 5;
     public int worldHeight = 5;
     public int worldDepth = 5;
@@ -39,7 +39,7 @@ public class World : MonoBehaviour
         chunks = new Dictionary<Vector3Int, Chunk>(worldWidth*worldHeight*worldDepth);;
         CreateChunks();
     }
-
+    
     private void CreateChunks()
     {
         for (int x = 0; x < worldWidth; x++)
@@ -53,7 +53,7 @@ public class World : MonoBehaviour
             }
         }
     }
-
+    
     private Chunk GetChunk(Vector3Int pos)
     {
         return GetChunk(pos.x, pos.y, pos.z);
@@ -149,13 +149,15 @@ public class World : MonoBehaviour
     {
         return worldBounds.Contains(point);
     }
-
+    
     public void CreateChunk(int x, int y, int z)
     {
         Vector3Int position = new Vector3Int(x, y, z);
 
         Chunk chunk = Instantiate(chunkPrefab, position, Quaternion.identity).GetComponent<Chunk>();
         chunk.Initialize(this, chunkSize, position);
+        chunk.transform.parent = ParentChunk.transform;
         chunks.Add(position, chunk);
     }
+    
 }

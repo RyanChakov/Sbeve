@@ -39,7 +39,7 @@ public class Chunk : MonoBehaviour
         this.chunkSize = chunkSize;
         this.position = position;
         _isolevel = world.isolevel;
-
+     
         _densityGenerator = world.densityGenerator;
         
         int worldPosX = position.x;
