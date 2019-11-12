@@ -4,37 +4,51 @@ using UnityEngine;
 public class proc : MonoBehaviour
 {
     public GameObject chunkPrefab;
-    public GameObject OutCube;
+   
+   
     public World world;
     bool good = false;
     int chunkZ = 20;
+    float newX = 0;
+    float newZ = 0;
+    //260 by 260
     void Update()
     {
-        if (!Physics.Raycast(OutCube.transform.position, OutCube.transform.TransformDirection(Vector3.down)))
+        if (!Physics.Raycast( transform.position,  transform.TransformDirection(Vector3.down)))
         {
             good = true;
 
         }
         if (good)
         { 
-            go();
+            newX =  transform.position.x - ( transform.position.x % 20);
+            newZ =  transform.position.z - ( transform.position.z % 20);
+            for (int y=0; y<13; y++)
+                CreateNewChunkNew((int)newX, y * 20, (int)newZ);
+            good = false;
         }
 
     }
    private void go()
     {
+
+
+        newX =  transform.position.x - ( transform.position.x % 20);
+        newZ =  transform.position.z - ( transform.position.z % 20);
+        for (int y=0; y<13; y++)
+            CreateNewChunkNew((int)newX, y * 20, (int)newZ);
         good = false;
-        for (int x = 0; x < chunkZ/2; x++)
+        /*for (int x = 0; x < 13; x++)
         {
-            for (int y = 0; y < chunkZ/2; y++)
+            for (int y = 0; y < 13; y++)
             {
-                for (int z = 0; z < chunkZ/2; z++)
+                for (int z = 0; z < 13; z++)
                 {
                   
-                    CreateNewChunkNew((x * chunkZ)+(int)OutCube.transform.position.x, (y * chunkZ), (z * chunkZ) + (int)OutCube.transform.position.z);
+                    CreateNewChunkNew((x * chunkZ)+(int)newX, (y * chunkZ), (z * chunkZ) + (int)newZ);
                 }
             }
-        }
+        }*/
        
     }
 
