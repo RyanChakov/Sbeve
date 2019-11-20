@@ -480,7 +480,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.9e-43, y: 0.042636514, z: 4.5905e-41, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 5.596218e-14, z: -1.7689653e+31, w: 6.794607e-13}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -4199,7 +4199,7 @@ MonoBehaviour:
   worldWidth: 13
   worldHeight: 13
   worldDepth: 13
-  isolevel: 0.5
+  isolevel: 1
   seed: 3391
   chunkPrefab: {fileID: 7489232383384105734, guid: 58c1dc75b64dbec41a572954c3bcd523,
     type: 3}

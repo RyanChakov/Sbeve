@@ -7,14 +7,14 @@ public class proc : MonoBehaviour
    
    
     public World world;
-    int chunkZ = 20;
-    float newX = 0;
-    float newZ = 0;
+    short chunkZ = 20;
+    
     //260 by 260
     void Update()
     {
-     
 
+        float newX = 0;
+        float newZ = 0;
         if (!Physics.Raycast( transform.position,  transform.TransformDirection(Vector3.down)))
         {
            if(transform.position.x < 0)

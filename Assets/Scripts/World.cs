@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class World : MonoBehaviour
@@ -36,12 +37,14 @@ public class World : MonoBehaviour
         worldBounds = new Bounds();
         UpdateBounds();
 
-        chunks = new Dictionary<Vector3Int, Chunk>(worldWidth*worldHeight*worldDepth);;
+        chunks = new Dictionary<Vector3Int, Chunk>(worldWidth*worldHeight*worldDepth);
         CreateChunks();
     }
     
     private void CreateChunks()
     {
+
+        int t = DateTime.Now.Second;
         for (int x = 0; x < worldWidth; x++)
         {
             for (int y = 0; y < worldHeight; y++)
@@ -52,6 +55,8 @@ public class World : MonoBehaviour
                 }
             }
         }
+
+        Debug.Log("Time: " + (DateTime.Now.Second - t));
     }
     
     private Chunk GetChunk(Vector3Int pos)

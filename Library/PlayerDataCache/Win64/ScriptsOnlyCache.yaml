@@ -11,7 +11,9 @@ ScriptsOnlyBuild:
     - destory
     - moving
     - proc
+    - rotate
     - spawnMin
+    - start
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -26,7 +28,38 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
+    - UnityEngine.UI.Text
   sceneClasses:
+    Assets/Scenes/DungeonCreation.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
     Assets/Scenes/SampleScene.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -69,37 +102,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9286}
+      Script: {instanceID: 9288}
     - Class: 114
-      Script: {instanceID: 9338}
+      Script: {instanceID: 9342}
     - Class: 114
-      Script: {instanceID: 9344}
+      Script: {instanceID: 9348}
     - Class: 114
-      Script: {instanceID: 9350}
+      Script: {instanceID: 9354}
     - Class: 114
-      Script: {instanceID: 9358}
+      Script: {instanceID: 9362}
     - Class: 114
-      Script: {instanceID: 9394}
+      Script: {instanceID: 9398}
     - Class: 114
-      Script: {instanceID: 9438}
+      Script: {instanceID: 9442}
     - Class: 114
-      Script: {instanceID: 9578}
+      Script: {instanceID: 9582}
     - Class: 114
-      Script: {instanceID: 9742}
+      Script: {instanceID: 9746}
     - Class: 114
-      Script: {instanceID: 9768}
+      Script: {instanceID: 9772}
     - Class: 114
-      Script: {instanceID: 9784}
+      Script: {instanceID: 9788}
     - Class: 114
-      Script: {instanceID: 9854}
+      Script: {instanceID: 9858}
     - Class: 114
-      Script: {instanceID: 9956}
+      Script: {instanceID: 9960}
     - Class: 114
-      Script: {instanceID: 9978}
+      Script: {instanceID: 9982}
     - Class: 114
-      Script: {instanceID: 10130}
+      Script: {instanceID: 10134}
     - Class: 114
-      Script: {instanceID: 10456}
+      Script: {instanceID: 10462}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -117,6 +150,53 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 258
+      Script: {instanceID: 0}
+    Assets/Scenes/Starter.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9298}
+    - Class: 114
+      Script: {instanceID: 9342}
+    - Class: 114
+      Script: {instanceID: 9348}
+    - Class: 114
+      Script: {instanceID: 9354}
+    - Class: 114
+      Script: {instanceID: 9384}
+    - Class: 114
+      Script: {instanceID: 9398}
+    - Class: 114
+      Script: {instanceID: 9400}
+    - Class: 114
+      Script: {instanceID: 10188}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -161,6 +241,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: rotate
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -763,6 +849,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 3f64726eb11e55c0a8e52560a1f08e95
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: start
+  - hash:
+      serializedVersion: 2
       Hash: ee0cef6caaac8ae485bfa82f000f0f7b
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -829,5 +921,7 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 19
   scenePathNames:
+  - Assets/Scenes/Starter.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/student/Documents/Unity Games/AllBuilds/Sbeve.exe
+  - Assets/Scenes/DungeonCreation.unity
+  playerPath: C:/Users/student/Documents/Unity Games/Build1.6/Sbeve.exe
