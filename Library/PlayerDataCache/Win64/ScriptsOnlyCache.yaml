@@ -102,37 +102,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9288}
+      Script: {instanceID: 9302}
     - Class: 114
-      Script: {instanceID: 9342}
-    - Class: 114
-      Script: {instanceID: 9348}
-    - Class: 114
-      Script: {instanceID: 9354}
+      Script: {instanceID: 9356}
     - Class: 114
       Script: {instanceID: 9362}
     - Class: 114
-      Script: {instanceID: 9398}
+      Script: {instanceID: 9368}
     - Class: 114
-      Script: {instanceID: 9442}
+      Script: {instanceID: 9376}
     - Class: 114
-      Script: {instanceID: 9582}
+      Script: {instanceID: 9412}
     - Class: 114
-      Script: {instanceID: 9746}
+      Script: {instanceID: 9456}
     - Class: 114
-      Script: {instanceID: 9772}
+      Script: {instanceID: 9596}
     - Class: 114
-      Script: {instanceID: 9788}
+      Script: {instanceID: 9760}
     - Class: 114
-      Script: {instanceID: 9858}
+      Script: {instanceID: 9786}
     - Class: 114
-      Script: {instanceID: 9960}
+      Script: {instanceID: 9802}
     - Class: 114
-      Script: {instanceID: 9982}
+      Script: {instanceID: 9872}
     - Class: 114
-      Script: {instanceID: 10134}
+      Script: {instanceID: 9974}
     - Class: 114
-      Script: {instanceID: 10462}
+      Script: {instanceID: 9996}
+    - Class: 114
+      Script: {instanceID: 10148}
+    - Class: 114
+      Script: {instanceID: 10476}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -171,21 +171,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9298}
+      Script: {instanceID: 9312}
     - Class: 114
-      Script: {instanceID: 9342}
+      Script: {instanceID: 9356}
     - Class: 114
-      Script: {instanceID: 9348}
+      Script: {instanceID: 9362}
     - Class: 114
-      Script: {instanceID: 9354}
-    - Class: 114
-      Script: {instanceID: 9384}
+      Script: {instanceID: 9368}
     - Class: 114
       Script: {instanceID: 9398}
     - Class: 114
-      Script: {instanceID: 9400}
+      Script: {instanceID: 9412}
     - Class: 114
-      Script: {instanceID: 10188}
+      Script: {instanceID: 9414}
+    - Class: 114
+      Script: {instanceID: 10202}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -924,4 +924,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Starter.unity
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/DungeonCreation.unity
-  playerPath: C:/Users/student/Documents/Unity Games/Build1.6/Sbeve.exe
+  playerPath: C:/Users/student/Documents/Unity Games/AllBuilds/Build1.6.3/Sbeve.exe
