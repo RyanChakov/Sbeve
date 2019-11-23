@@ -31,35 +31,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/DungeonCreation.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
     Assets/Scenes/SampleScene.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -102,37 +73,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9302}
+      Script: {instanceID: 9328}
     - Class: 114
-      Script: {instanceID: 9356}
+      Script: {instanceID: 9382}
     - Class: 114
-      Script: {instanceID: 9362}
+      Script: {instanceID: 9388}
     - Class: 114
-      Script: {instanceID: 9368}
+      Script: {instanceID: 9394}
     - Class: 114
-      Script: {instanceID: 9376}
+      Script: {instanceID: 9402}
     - Class: 114
-      Script: {instanceID: 9412}
+      Script: {instanceID: 9438}
     - Class: 114
-      Script: {instanceID: 9456}
+      Script: {instanceID: 9482}
     - Class: 114
-      Script: {instanceID: 9596}
-    - Class: 114
-      Script: {instanceID: 9760}
+      Script: {instanceID: 9622}
     - Class: 114
       Script: {instanceID: 9786}
     - Class: 114
-      Script: {instanceID: 9802}
+      Script: {instanceID: 9812}
     - Class: 114
-      Script: {instanceID: 9872}
+      Script: {instanceID: 9828}
     - Class: 114
-      Script: {instanceID: 9974}
+      Script: {instanceID: 9898}
     - Class: 114
-      Script: {instanceID: 9996}
+      Script: {instanceID: 10000}
     - Class: 114
-      Script: {instanceID: 10148}
+      Script: {instanceID: 10022}
     - Class: 114
-      Script: {instanceID: 10476}
+      Script: {instanceID: 10174}
+    - Class: 114
+      Script: {instanceID: 10502}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -171,21 +142,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 9312}
+      Script: {instanceID: 9338}
     - Class: 114
-      Script: {instanceID: 9356}
+      Script: {instanceID: 9382}
     - Class: 114
-      Script: {instanceID: 9362}
+      Script: {instanceID: 9388}
     - Class: 114
-      Script: {instanceID: 9368}
+      Script: {instanceID: 9394}
     - Class: 114
-      Script: {instanceID: 9398}
+      Script: {instanceID: 9424}
     - Class: 114
-      Script: {instanceID: 9412}
+      Script: {instanceID: 9438}
     - Class: 114
-      Script: {instanceID: 9414}
+      Script: {instanceID: 9440}
     - Class: 114
-      Script: {instanceID: 10202}
+      Script: {instanceID: 10228}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -923,5 +894,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Starter.unity
   - Assets/Scenes/SampleScene.unity
-  - Assets/Scenes/DungeonCreation.unity
-  playerPath: C:/Users/student/Documents/Unity Games/AllBuilds/Build1.6.3/Sbeve.exe
+  playerPath: E:/Users/Ryan/Desktop/GitUnity/All builds/Build1.6.2/Sbeve.exe
