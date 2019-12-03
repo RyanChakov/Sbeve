@@ -110,6 +110,12 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/student/Documents/Unity Games/Marching Square/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VectorGraphics">
+      <HintPath>C:/Users/student/Documents/Unity Games/Marching Square/Library/ScriptAssemblies/Unity.VectorGraphics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InternalAPIEditorBridge.003">
+      <HintPath>C:/Users/student/Documents/Unity Games/Marching Square/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.003.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/student/Documents/Unity Games/Marching Square/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -122,20 +128,14 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/student/Documents/Unity Games/Marching Square/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.VectorGraphics.Editor">
+      <HintPath>C:/Users/student/Documents/Unity Games/Marching Square/Library/ScriptAssemblies/Unity.VectorGraphics.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/student/Documents/Unity Games/Marching Square/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>C:/Users/student/Documents/Unity Games/Marching Square/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VectorGraphics">
-      <HintPath>C:/Users/student/Documents/Unity Games/Marching Square/Library/ScriptAssemblies/Unity.VectorGraphics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.InternalAPIEditorBridge.003">
-      <HintPath>C:/Users/student/Documents/Unity Games/Marching Square/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.003.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VectorGraphics.Editor">
-      <HintPath>C:/Users/student/Documents/Unity Games/Marching Square/Library/ScriptAssemblies/Unity.VectorGraphics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
