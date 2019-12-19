@@ -68,7 +68,7 @@ MonoBehaviour:
     y: 0
     width: 2195
     height: 1152
-  m_MinSize: {x: 950, y: 544}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &4
 MonoBehaviour:
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_MinSize: {x: 715, y: 494}
   m_MaxSize: {x: 18010, y: 14044}
   vertical: 0
-  controlID: 302
+  controlID: 313
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 422}
   m_MaxSize: {x: 4002, y: 8022}
   vertical: 1
-  controlID: 303
+  controlID: 314
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -211,8 +211,8 @@ MonoBehaviour:
     y: 740
     width: 859
     height: 362
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 494}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 199
+  controlID: 292
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -262,8 +262,8 @@ MonoBehaviour:
     y: 0
     width: 492
     height: 575
-  m_MinSize: {x: 202, y: 222}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -314,8 +314,8 @@ MonoBehaviour:
     y: 0
     width: 844
     height: 1102
-  m_MinSize: {x: 279, y: 72}
-  m_MaxSize: {x: 4004, y: 4022}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -440,9 +440,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 93.36069, y: 117.31103, z: 121.659096}
+    m_Target: {x: 90.86155, y: 115.61194, z: 114.05347}
     speed: 2
-    m_Value: {x: 93.36069, y: 117.31103, z: 121.659096}
+    m_Value: {x: 90.86155, y: 115.61194, z: 114.05347}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -471,13 +471,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.2623472, y: -0.20166826, z: -0.056167047, w: -0.9419963}
+    m_Target: {x: 0.0002023249, y: -0.99868995, z: -0.05109638, w: -0.0038875444}
     speed: 2
-    m_Value: {x: 0.26234722, y: -0.20166828, z: -0.05616705, w: -0.94199634}
+    m_Value: {x: 0.00020232412, y: -0.99868613, z: -0.051096186, w: -0.0038875295}
   m_Size:
-    m_Target: 4.2317605
+    m_Target: 10.535464
     speed: 2
-    m_Value: 4.2317605
+    m_Value: 10.535464
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -685,19 +685,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\student\Documents\Unity Games\Marching Square
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 502a0000
-    m_LastClickedID: 10832
+    m_SelectedIDs: a0340000
+    m_LastClickedID: 13472
     m_ExpandedIDs: 00000000502a0000682c0000562d00001233000016340000724400007444000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -753,22 +753,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: cc280000522700005e3b000088330000dc320000d42c00002c2a0000de2e0000e62c000014390000ba3900003a390000544a00004246000066450000000000004c3a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: destory
+      m_OriginalName: destory
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 10068
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 12}
     m_CreateAssetUtility:
