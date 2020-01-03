@@ -8,9 +8,13 @@ public class moving : MonoBehaviour
     public float jumpSpeed = 8.0F;
     public float gravity = 20.0F;
     private Vector3 moveDirection = Vector3.zero;
-
+    public AstarPath aP;
+    
     void Update()
     {
+        AstarPath.active.Scan();
+        aP.astarData.gridGraph.center = new Vector3(transform.position.x, transform.position.y-80, transform.position.z);
+
         float speed = speedF;
         CharacterController controller = GetComponent<CharacterController>();
         // is the controller on the ground?

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 653261042593780732}
   - component: {fileID: -2695639465944557597}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Windmill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 7727831921960539159}
   - component: {fileID: 1305029013181085927}
   - component: {fileID: 1028269870460870815}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
