@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - Cycle
     - FreeCam
     - PickUp
+    - Skeleton
     - TerrainEditor
     - World
     - destory
@@ -32,8 +33,11 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -131,6 +135,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10572}
     - Class: 114
       Script: {instanceID: 10836}
+    - Class: 114
+      Script: {instanceID: 34690}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -1127,8 +1133,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 86c5173fc0a343ad2d03d5af6d567adf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Skeleton
   platform: 5
   scenePathNames:
   - Assets/Scenes/Starter.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/Users/Ryan/Desktop/GitUnity/All builds/Build1.7/Sbeve.exe
+  playerPath: E:/Users/Ryan/Desktop/GitUnity/All builds/Build1.7.3/Sbeve.exe

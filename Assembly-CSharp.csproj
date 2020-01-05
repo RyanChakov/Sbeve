@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\PickUp.cs" />
     <Compile Include="Assets\Scripts\Point.cs" />
     <Compile Include="Assets\Scripts\proc.cs" />
+    <Compile Include="Assets\Scripts\Skeleton.cs" />
     <Compile Include="Assets\Scripts\spawnMin.cs" />
     <Compile Include="Assets\Scripts\TerrainEditor.cs" />
     <Compile Include="Assets\Scripts\Utils.cs" />
