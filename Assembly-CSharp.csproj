@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\OnlineAssests\Libraries\FastNoise\FastNoise.cs" />
     <Compile Include="Assets\rotate.cs" />
+    <Compile Include="Assets\Scripts\ChangeCamera.cs" />
     <Compile Include="Assets\Scripts\CheckGround.cs" />
     <Compile Include="Assets\Scripts\Chunk.cs" />
     <Compile Include="Assets\Scripts\Cycle.cs" />
