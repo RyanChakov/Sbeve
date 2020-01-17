@@ -502,6 +502,11 @@ PrefabInstance:
       propertyPath: batchGraphUpdates
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1240336587012713439, guid: c884d44d723f5224baffe64252b29ad3,
+        type: 3}
+      propertyPath: showGraphs
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c884d44d723f5224baffe64252b29ad3, type: 3}
 --- !u!1 &124387901
@@ -3964,6 +3969,7 @@ MonoBehaviour:
   start: {fileID: 124387901}
   end: {fileID: 632235073}
   player: {fileID: 7302699947255979615}
+  timer: 0
 --- !u!20 &878849795
 Camera:
   m_ObjectHideFlags: 0
@@ -8873,7 +8879,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8296172667580372143}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 3b6ad063af86b2843ab8654845f91703, type: 3}
   m_Controller: {fileID: 9100000, guid: 1fefc94ae77a3384791c31dddf6d3907, type: 2}
   m_CullingMode: 1
@@ -10239,7 +10245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2810947748715925636}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 7499840821615675278}

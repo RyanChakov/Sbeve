@@ -701,16 +701,8 @@ namespace Pathfinding {
 		/// See: DebugString
 		/// </summary>
 		protected void DebugStringPrefix (PathLog logMode, System.Text.StringBuilder text) {
-			text.Append(error ? "Path Failed : " : "Path Completed : ");
-			text.Append("Computation Time ");
-			text.Append(duration.ToString(logMode == PathLog.Heavy ? "0.000 ms " : "0.00 ms "));
-
-			text.Append("Searched Nodes ").Append(searchedNodes);
-
-			if (!error) {
-				text.Append(" Path Length ");
-				text.Append(path == null ? "Null" : path.Count.ToString());
-			}
+			
+			
 		}
 
 		/// <summary>
@@ -718,19 +710,7 @@ namespace Pathfinding {
 		/// See: DebugString
 		/// </summary>
 		protected void DebugStringSuffix (PathLog logMode, System.Text.StringBuilder text) {
-			if (error) {
-				text.Append("\nError: ").Append(errorLog);
-			}
-
-			// Can only print this from the Unity thread
-			// since otherwise an exception might be thrown
-			if (logMode == PathLog.Heavy && !AstarPath.active.IsUsingMultithreading) {
-				text.Append("\nCallback references ");
-				if (callback != null) text.Append(callback.Target.GetType().FullName).AppendLine();
-				else text.AppendLine("NULL");
-			}
-
-			text.Append("\nPath Number ").Append(pathID).Append(" (unique id)");
+			
 		}
 
 		/// <summary>

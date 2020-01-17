@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ChangeCamera
     - CheckGround
     - Chunk
     - Cycle
@@ -33,10 +34,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnimatorTransitionInspector
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
@@ -126,17 +127,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10182}
     - Class: 114
-      Script: {instanceID: 10212}
+      Script: {instanceID: 10206}
     - Class: 114
-      Script: {instanceID: 10410}
+      Script: {instanceID: 10214}
     - Class: 114
-      Script: {instanceID: 10566}
+      Script: {instanceID: 10412}
     - Class: 114
-      Script: {instanceID: 10572}
+      Script: {instanceID: 10568}
     - Class: 114
-      Script: {instanceID: 10836}
+      Script: {instanceID: 10574}
     - Class: 114
-      Script: {instanceID: 34690}
+      Script: {instanceID: 10766}
+    - Class: 114
+      Script: {instanceID: 10840}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -146,6 +149,8 @@ ScriptsOnlyBuild:
     - Class: 143
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -195,17 +200,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9928}
     - Class: 114
-      Script: {instanceID: 10278}
+      Script: {instanceID: 10280}
     - Class: 114
-      Script: {instanceID: 10368}
+      Script: {instanceID: 10370}
     - Class: 114
-      Script: {instanceID: 10382}
+      Script: {instanceID: 10384}
     - Class: 114
-      Script: {instanceID: 10474}
+      Script: {instanceID: 10476}
     - Class: 114
-      Script: {instanceID: 10562}
+      Script: {instanceID: 10564}
     - Class: 114
-      Script: {instanceID: 10870}
+      Script: {instanceID: 10874}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -871,7 +876,13 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: c812d0a53df4ad1ef500643318e658f4
+      Hash: 936e2f5e3e3b3adcfaf49f1019fcc190
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Skeleton
+  - hash:
+      serializedVersion: 2
+      Hash: e1ebe2094ad1d77ada6a45a4865c1138
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: moving
@@ -1057,6 +1068,12 @@ ScriptsOnlyBuild:
     className: NodeLink3
   - hash:
       serializedVersion: 2
+      Hash: 30839def6f5cb7127a253fc6620ed52e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChangeCamera
+  - hash:
+      serializedVersion: 2
       Hash: 2fde15209800c4e94cf99bcad8981a24
     assemblyName: AstarPathfindingProject.dll
     namespaceName: Pathfinding.Examples
@@ -1133,14 +1150,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 86c5173fc0a343ad2d03d5af6d567adf
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Skeleton
   platform: 5
   scenePathNames:
   - Assets/Scenes/Starter.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/Users/Ryan/Desktop/GitUnity/All builds/Build1.7.3/Sbeve.exe
+  playerPath: E:/Users/Ryan/Desktop/GitUnity/All builds/Build1.7.7/Sbeve.exe

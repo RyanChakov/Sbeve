@@ -75,7 +75,7 @@ public class FreeCam : MonoBehaviour
         if (looking)
         {
             float newRotationX = player.transform.localEulerAngles.y + Input.GetAxis("Mouse X") * freeLookSensitivity;
-           float newRotationY = head.transform.localEulerAngles.x - Input.GetAxis("Mouse Y") * freeLookSensitivity;
+            float newRotationY = head.transform.localEulerAngles.x - Input.GetAxis("Mouse Y") * freeLookSensitivity;
           
             player.transform.localEulerAngles = new Vector3(0, newRotationX, 0f);
             head.transform.localEulerAngles = new Vector3(newRotationY, 0, 0f);

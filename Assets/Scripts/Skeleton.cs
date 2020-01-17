@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 public class Skeleton : MonoBehaviour
 {
@@ -31,7 +30,6 @@ public class Skeleton : MonoBehaviour
             Skel.enabled = true;
             Skel.SetTrigger("Attacking");
             Skel.ResetTrigger("running");
-           
             attack();
         }
         
@@ -45,11 +43,13 @@ public class Skeleton : MonoBehaviour
             player.Phealth -= .1f;
             print("This is the player Health" + player.Phealth);
             timer = timerT;
-            
-                bLength -= .04f;
+    
+            bLength -= .04f;
             if (bLength <= 0)
             {
                 bLength = 0;
+                Robot.enabled = true;
+
                 Robot.SetTrigger("Dead");
                 Robot.GetComponentInParent<moving>().enabled = false;
                 Robot.GetComponentInParent<CharacterController>().enabled = false;
@@ -64,6 +64,7 @@ public class Skeleton : MonoBehaviour
         }
         else
         {
+            
             print(timer);
             timer -= Time.deltaTime;
         }
