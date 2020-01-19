@@ -31,15 +31,6 @@ ScriptsOnlyBuild:
     - TMPro.TextMeshProUGUI
     Unity.VectorGraphics.dll:
     - SVGImage
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnimatorTransitionInspector
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
@@ -270,7 +261,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: 580891c834636c84e036f67aff786387
+      Hash: cd1ea4dded672b0c8551f503e99868c0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PickUp
@@ -876,13 +867,13 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 936e2f5e3e3b3adcfaf49f1019fcc190
+      Hash: 8e8738ab548a18823b8aa7e094d205d3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Skeleton
   - hash:
       serializedVersion: 2
-      Hash: e1ebe2094ad1d77ada6a45a4865c1138
+      Hash: 77816f5cdc897fd60adfc1f9fb224b39
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: moving
@@ -1080,7 +1071,7 @@ ScriptsOnlyBuild:
     className: ProceduralWorld
   - hash:
       serializedVersion: 2
-      Hash: 0fb70e2dbc9bfcb3315cb0bbcc2dd158
+      Hash: 90bfbb8129298a47a45c6b98f6fa2717
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FreeCam
@@ -1154,4 +1145,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Starter.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/Users/Ryan/Desktop/GitUnity/All builds/Build1.7.7/Sbeve.exe
+  playerPath: E:/Users/Ryan/Desktop/GitUnity/All builds/Build1.8/Sbeve.exe

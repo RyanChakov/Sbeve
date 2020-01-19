@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
+    public GameObject cam;
     RaycastHit hit = new RaycastHit();
     public int amberCount = 0, amethystCount = 0, aquamarineCount = 0, coalCount = 0, copperCount = 0, emeraldCount = 0, garnetCount = 0, goldCount = 0, lapisCount = 0, obsidianCount = 0, pearlCount = 0, rubyCount = 0, smokyCount = 0, money = 0, totalmoney = 0;
     public float newScale = 0;
@@ -16,7 +17,7 @@ public class PickUp : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 10f))
+            if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, 10f))
             {
                 if (hit.collider.gameObject.layer == 9)
                 {

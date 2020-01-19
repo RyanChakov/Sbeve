@@ -1,54 +1,41 @@
 ﻿using UnityEngine;
 
-/// <summary>
-/// A simple free camera to be added to a Unity game object.
-/// 
-/// Keys:
-///	wasd / arrows	- movement
-///	q/e 			- up/down (local space)
-///	r/f 			- up/down (world space)
-///	pageup/pagedown	- up/down (world space)
-///	hold shift		- enable fast movement mode
-///	right mouse  	- enable free look
-///	mouse			- free look / rotation
-///     
-/// </summary>
 public class FreeCam : MonoBehaviour
 {
-    /// <summary>
-    /// Normal speed of camera movement.
-    /// </summary>
     public GameObject player;
     public GameObject head;
     public float movementSpeed = 10f;
-
-    /// <summary>
-    /// Speed of camera movement when shift is held down,
-    /// </summary>
-    
-
-    /// <summary>
-    /// Sensitivity for free look.
-    /// </summary>
+    public Skeleton SKL;
     public float freeLookSensitivity = 3f;
-
-    /// <summary>
-    /// Amount to zoom the camera when using the mouse wheel.
-    /// </summary>
- 
-
-    /// <summary>
-    /// Amount to zoom the camera when using the mouse wheel (fast mode).
-    /// </summary>
-   
-
-    /// <summary>
-    /// Set to true when free looking (on right mouse button).
-    /// </summary>
+    public Animator Robot;
     private bool looking;
-
+    int layerMask = 1 << 14;
     void Update()
     {
+        
+        if (Input.GetMouseButtonDown(1))
+        {
+          
+            Robot.Play("RobotArmature|Robot_Punch");
+  
+            //Spammable
+            if(Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), 4, layerMask))
+            {
+                attack();
+                print("ATTACK");
+            }
+
+            // Not spammable
+            /*
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), 4, layerMask) && !Robot.GetCurrentAnimatorStateInfo(0).IsName("RobotArmature|Robot_Punch"))
+            {
+                attack();
+                print("ATTACK");
+            }
+
+            */
+        }
+        
         
         var movementSpeed = this.movementSpeed;
         
@@ -75,10 +62,17 @@ public class FreeCam : MonoBehaviour
         if (looking)
         {
             float newRotationX = player.transform.localEulerAngles.y + Input.GetAxis("Mouse X") * freeLookSensitivity;
-            float newRotationY = head.transform.localEulerAngles.x - Input.GetAxis("Mouse Y") * freeLookSensitivity;
+            float newRotationY = this.transform.localEulerAngles.x - Input.GetAxis("Mouse Y") * freeLookSensitivity;
           
             player.transform.localEulerAngles = new Vector3(0, newRotationX, 0f);
-            head.transform.localEulerAngles = new Vector3(newRotationY, 0, 0f);
+            // -90 to 90
+
+            if(newRotationY >90 && newRotationY<200)
+            {
+                newRotationY = 90;
+            }
+            this.transform.localEulerAngles = new Vector3(newRotationY, 0, 0f);
+            
         }
         
         
@@ -88,12 +82,10 @@ public class FreeCam : MonoBehaviour
 
     void OnDisable()
     {
-        StopLooking();
+      //  StopLooking();
     }
 
-    /// <summary>
-    /// Enable free looking.
-    /// </summary>
+   
     public void StartLooking()
     {
         looking = true;
@@ -101,13 +93,22 @@ public class FreeCam : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    /// <summary>
-    /// Disable free looking.
-    /// </summary>
+   
     public void StopLooking()
     {
         looking = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    void attack()
+    {
+        
+            if (SKL.SHelath != 0)
+            {
+                SKL.SHelath -= 1f;
+                print(SKL.SHelath);
+            }
+      
     }
 }

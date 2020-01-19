@@ -10,7 +10,8 @@ public class moving : MonoBehaviour
     public float gravity = 20.0F;
     private Vector3 moveDirection = Vector3.zero;
     public AstarPath aP;
-    
+    public Animator Robot;
+    float timer = .15f;
     void Update()
     {
         AstarPath.active.Scan();
@@ -40,13 +41,26 @@ public class moving : MonoBehaviour
             moveDirection *= speed;
             //Jumping
             if (Input.GetButton("Jump"))
+            {
+                timer = .15f;
+            if(Mathf.Abs(controller.velocity.x) >2)
+                {
+                    Robot.Play("WalkJump2");
+                }
+                else
+                {
+                    Robot.Play("Jump3");
+                }
                 moveDirection.y = jumpSpeed;
+
+            }
 
         }
         //Applying gravity to the controller
         moveDirection.y -= gravity * Time.deltaTime;
         //Making the character move
 
+        Robot.SetFloat("Speed", Mathf.Abs(controller.velocity.x));
        
         controller.Move(moveDirection * Time.deltaTime);
     }

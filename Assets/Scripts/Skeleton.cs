@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
+using Pathfinding;
 public class Skeleton : MonoBehaviour
 {
     public moving player;
     bool idle = false;
     float timerT = .78f;
     float timer = .78f;
+    float Dtimer = 4f;
+    public float SHelath=10;
     public Animator Skel;
     public Animator Robot;
     public RectTransform hBar;
@@ -16,32 +19,52 @@ public class Skeleton : MonoBehaviour
     public Transform target;
     public GameObject free;
     public ChangeCamera cC;
+ 
     // Update is called once per frame
     void Update()
     {
-        
-        if (Vector3.Distance(transform.position, target.position) >= 4f)
-        {
-            Skel.SetTrigger("running");
+        if(SHelath!=0)
+        { 
+            if (Vector3.Distance(transform.position, target.position) >= 4f)
+            {
+                Skel.SetTrigger("running");
+            }
+            else if (Vector3.Distance(transform.position, target.position) < 4f)
+            {
+                Skel.enabled = false;
+                Skel.enabled = true;
+                Skel.SetTrigger("Attacking");
+                Skel.ResetTrigger("running");
+                attack();
+            }
         }
-        else if (Vector3.Distance(transform.position, target.position) < 4f)
+        else
         {
-            Skel.enabled = false;
-            Skel.enabled = true;
-            Skel.SetTrigger("Attacking");
-            Skel.ResetTrigger("running");
-            attack();
+            Skel.Play("SkeletonArmature|Skeleton_Death");
+            GetComponent<AIPath>().enabled = false;
+            if (Dtimer <= 0)
+            {
+
+                Destroy(this.gameObject);
+            }
+            else
+            {
+
+
+                Dtimer -= Time.deltaTime;
+            }
+            
         }
-        
+
     }
     void attack()
     {
         
-        print("ATTACKING");
+       
         if(timer<=0)
         {
             player.Phealth -= .1f;
-            print("This is the player Health" + player.Phealth);
+           
             timer = timerT;
     
             bLength -= .04f;
@@ -65,7 +88,7 @@ public class Skeleton : MonoBehaviour
         else
         {
             
-            print(timer);
+
             timer -= Time.deltaTime;
         }
 
