@@ -505,7 +505,7 @@ PrefabInstance:
     - target: {fileID: 1240336587012713439, guid: c884d44d723f5224baffe64252b29ad3,
         type: 3}
       propertyPath: showGraphs
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c884d44d723f5224baffe64252b29ad3, type: 3}
@@ -2842,7 +2842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &656058508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6041,7 +6041,7 @@ GameObject:
   - component: {fileID: 1592070205}
   - component: {fileID: 1592070204}
   - component: {fileID: 1592070203}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
