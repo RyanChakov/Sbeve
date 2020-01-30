@@ -31,7 +31,7 @@ public class spawnMin : MonoBehaviour
            temp =  Instantiate(building2, new Vector3(x, 116, z), Quaternion.identity);
             temp.transform.parent = ParentSurf.transform;
         }
-        for (int q = 0; q < 20; q++)
+        for (int q = 0; q < 10; q++)
         {
             int x = Random.Range(0, 260);
            
