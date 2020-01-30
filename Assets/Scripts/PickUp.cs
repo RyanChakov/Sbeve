@@ -99,8 +99,7 @@ public class PickUp : MonoBehaviour
                     print("here");
 
                     print(money);
-                    slime.transform.localScale += new Vector3(money / 200, money / 200, money / 200);
-
+                    slime.transform.localScale += new Vector3(money / 20, money / 20, money / 20);
                 }
             }
         }

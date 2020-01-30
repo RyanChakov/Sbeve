@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 549545fab8c0e2546ad707533243a7be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: SampleScene
+  gameSceneName: Main
   load: {fileID: 149892245}
   tx: {fileID: 448317574}
 --- !u!1 &473193895

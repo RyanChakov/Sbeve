@@ -73,7 +73,8 @@ public class Skeleton : MonoBehaviour
                 bLength = 0;
                 Robot.enabled = true;
 
-                Robot.SetTrigger("Dead");
+                Robot.Play("RobotArmature|Robot_Death");
+                Skel.Play("SkeletonArmature|Skeleton_Idle");
                 Robot.GetComponentInParent<moving>().enabled = false;
                 Robot.GetComponentInParent<CharacterController>().enabled = false;
                 free.GetComponent<FreeCam>().enabled = false;
