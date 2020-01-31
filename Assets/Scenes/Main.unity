@@ -516,7 +516,7 @@ PrefabInstance:
     - target: {fileID: 1240336587012713439, guid: c884d44d723f5224baffe64252b29ad3,
         type: 3}
       propertyPath: data.dataString
-      value: UEsDBBQAAAgIAACYn+sjp/bvSQIAAPUEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFtVMtu2zAQ/BWD5xaQH7Wd3lrZcXpwEsQNctGFFlcWYYoU+Ihf8L93SVGR4vQkaWd2ObO71IVwaWrIrdIrzdlaMSA/B8S/k2+DDnyAI90pueFnaDlvnNnSk2jgvFDLFcaHPs2oCqzm+S+5E56cYNBJXihdLdkOUmWswXBBhQGEtLI+W2LoMiDHmHCKz7N/Dq74loO0oDvWMGl5w2HLxFjgOpkLWtXAvOb/pkSiRD+R47XnSghuohhiT3Uwm9LaOLSCBMYpmgsyPL8Evistfoz6yU9FYcBGA5qeFlxjj5qq5LdqGldRs2+UvVPh/DmT5G4aRDVV118Io2QyD4RCq+qhPboxZUue71/oKafG9prbDy8+a3fyQMWebgW8lSAf1UorJxmCVjuf6gyMFr1SH/bSEvJ9x2vU3gRd/XWcw26c19CAYyp4tY0Ifm6ECg2/8xmgcTR/UG5YDhPrYNRLeDXwl+76WxSBe66NRSgWlV7bVjntqWQZOuatOJsqLSGEo+IaJBX29Ixl7O0Mb7DesTfIPfX3JR4esfYa3KSEcMdPkhvoWR0+RmVKdViDKZ+cFVxCJ9oDj9inVEnZrFi/J23axumC5r20nePs82qReT7fjsf0LqHT+Qymk+/j8Wg2nY1nP4aTEdtOZiRsHpfok4rnRmhsD05NdsUlbln7GxmsNK3DujNNDyt+rlSv5VwWapNrAPn0qYIBjWfgrWRLxrE/G7CWyzBucsmIUPkeWPbBz4LR5dFqmnXuM1Lzd2V9JCNp+Hdk5Equ/wBQSwMEFAAACAgAAJif64hhj9VsAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTUUVBKL0osyCgGioA5pZkpIHa0kkWyRZKxcaKlQaKZhXmqmYmusbGRuZm5sbmpoYlRSpKJuVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAmJ/rI6f270kCAAD1BAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAmJ/riGGP1WwAAAB4AAAACQAkAAAAAAAAAAAAAACWAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAE0DAAAAAA==
+      value: UEsDBBQAAAgIAACYn+uvCubnSAIAAPUEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFtVMlu2zAQ/RWD5xaQl9pOb63sOD04CeIGuehCiyOLMEUKXOIN/vcOKSpSnJ4kvnkz82YhL4RLU0NulV5pztaKAfk5IP6ffBt0xgc40p2SG36GlvPGmS09iQbOC7VcIT70bkZVYDXPf8md8OQEQSd5oXS1ZDtIlbEG4YIKA2jSynpvidBlQI7R4RS/Z/8dXPEvB2lBd6xh0vKGw5aJWOA6mQta1cC85v+6RKLEeiLHa8+VENxEMcSe6lBsSmvjsBQkME6xuCDD80vgu9LiYdR3fioKAzYWoOlpwTX2qIlKfqumcRU1+0bZOxXO55kkd9Mgqom6/kIYJZN5IBRaVQ9t6qYoW/J8/0JPOTW219w+vPis3ckDFXu6FfBWgnxUK62cZGi02nlXZ2C06IX6KC8tId93vEbtDejqr+McduO8hgYcU8GrbWTgcSNUaPidP4PG0fxBuWE5TGQh6iW8GvhLd/0tioZ7ro1FU0wnvbatctpTyTJ0zJfibKq0hABHxTVIKuzpGcPY2xne2Hppbyz31N+XmDza2mtw4xLgjp8kN6ZndfgYlSnVYQ2mfHJWcAmdaG94xD6lSspmxfo9ad02Thc077ntHGefV4vM8/l2PKZ3CZ3OZzCdfB+PR7PpbDz7MZyM2HYyI2HzuMQ6qXhuhMb24NRkF1zilrXPyGClaR3WnWl6WPFzpXot57JQm1wDyKdPEQxozIG3ki0Zx/5swFouw7jJJSNC5Xtg2Qc/C4Uuj1bTrKs+IzV/V9YjGUnD25GRK7n+A1BLAwQUAAAICAAAmJ/riGGP1WwAAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNRRUEovSizIKAaKgDmlmSkgdrSSRbJFkrFxoqVBopmFeaqZia6xsZG5mbmxuamhiVFKkom5UixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACYn+uvCubnSAIAAPUEAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACYn+uIYY/VbAAAAHgAAAAJACQAAAAAAAAAAAAAAJUCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAATAMAAAAA
       objectReference: {fileID: 0}
     - target: {fileID: 1240336587012713439, guid: c884d44d723f5224baffe64252b29ad3,
         type: 3}
@@ -657,7 +657,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.917958e-11, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: NaN, y: 0, z: NaN, w: 2.9646704e+11}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1226,7 +1226,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 87bea67a1f665344db76a26592a34bb9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 98.23979
+      value: 84.04
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 87bea67a1f665344db76a26592a34bb9,
         type: 3}
@@ -1236,27 +1236,27 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 87bea67a1f665344db76a26592a34bb9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33.749756
+      value: 58.64
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 87bea67a1f665344db76a26592a34bb9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 87bea67a1f665344db76a26592a34bb9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 87bea67a1f665344db76a26592a34bb9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 87bea67a1f665344db76a26592a34bb9,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 87bea67a1f665344db76a26592a34bb9,
         type: 3}
@@ -1908,12 +1908,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b37d5da8407c86d46b1d0bc1ad769d82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hBar: {fileID: 1450596753}
   speedF: 6
   Phealth: 10
   jumpSpeed: 10
   gravity: 16
   aP: {fileID: 181597682}
   Robot: {fileID: 8296172667580372144}
+  free: {fileID: 534669907}
+  cC: {fileID: 878849793}
 --- !u!1001 &405036538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6402,7 +6405,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 4128e029367d49b40b2ab67a09785468,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 101.56413
+      value: 65.38
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4128e029367d49b40b2ab67a09785468,
         type: 3}
@@ -6412,27 +6415,27 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 4128e029367d49b40b2ab67a09785468,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33.814346
+      value: 14.39
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4128e029367d49b40b2ab67a09785468,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4128e029367d49b40b2ab67a09785468,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4128e029367d49b40b2ab67a09785468,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4128e029367d49b40b2ab67a09785468,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4128e029367d49b40b2ab67a09785468,
         type: 3}
@@ -6457,17 +6460,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 4128e029367d49b40b2ab67a09785468,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5000014
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4128e029367d49b40b2ab67a09785468,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4128e029367d49b40b2ab67a09785468,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5000014
+      value: 1.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4128e029367d49b40b2ab67a09785468, type: 3}
@@ -8409,6 +8412,7 @@ MonoBehaviour:
   pillar: {fileID: 1437749020}
   Castle: {fileID: 279223288}
   robot: {fileID: 8296172667580372143}
+  bHealth: 50
   attackPhase: 0
 --- !u!4 &1660202778 stripped
 Transform:
@@ -9025,10 +9029,7 @@ MonoBehaviour:
   SHelath: 10
   Skel: {fileID: 1766276489}
   Robot: {fileID: 8296172667580372144}
-  hBar: {fileID: 1450596753}
   target: {fileID: 5006512736423126716}
-  free: {fileID: 534669902}
-  cC: {fileID: 878849793}
 --- !u!114 &1766276493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9194,9 +9195,9 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 180
-  slowdownDistance: 20
+  slowdownDistance: 40
   pickNextWaypointDist: 1
-  endReachedDistance: 15
+  endReachedDistance: 34
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 0
   whenCloseToDestination: 0
@@ -9244,6 +9245,7 @@ MonoBehaviour:
   pillar: {fileID: 1437749020}
   Castle: {fileID: 279223288}
   robot: {fileID: 8296172667580372143}
+  bHealth: 50
   attackPhase: 0
 --- !u!54 &1795655945
 Rigidbody:

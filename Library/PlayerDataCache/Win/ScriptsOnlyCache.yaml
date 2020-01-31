@@ -35,14 +35,18 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
@@ -100,6 +104,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 9478}
     - Class: 114
       Script: {instanceID: 9486}
+    - Class: 114
+      Script: {instanceID: 9508}
     - Class: 114
       Script: {instanceID: 9522}
     - Class: 114
@@ -186,11 +192,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9418}
     - Class: 114
+      Script: {instanceID: 9464}
+    - Class: 114
       Script: {instanceID: 9466}
     - Class: 114
       Script: {instanceID: 9472}
     - Class: 114
       Script: {instanceID: 9478}
+    - Class: 114
+      Script: {instanceID: 9486}
     - Class: 114
       Script: {instanceID: 9508}
     - Class: 114
@@ -882,13 +892,13 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 8e8738ab548a18823b8aa7e094d205d3
+      Hash: 8fd4ab24488946ad2283acd101cc0d3f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Skeleton
   - hash:
       serializedVersion: 2
-      Hash: 77816f5cdc897fd60adfc1f9fb224b39
+      Hash: 89c93ea9f106ee088253c06882aef8ee
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: moving
@@ -1068,7 +1078,7 @@ ScriptsOnlyBuild:
     className: BlockManager
   - hash:
       serializedVersion: 2
-      Hash: a8d4151f8483b3a2aeb3c62aed5b606d
+      Hash: 956ef17508959d564454161b33980860
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Boss
@@ -1166,4 +1176,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Starter.unity
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/student/Documents/Unity Games/AllBuilds/Build1.7/Sbeve.exe
+  playerPath: E:/Users/Ryan/Desktop/GitUnity/All builds/Build1.9.3/Sbeve.exe

@@ -26,8 +26,6 @@ public class CheckGround : MonoBehaviour
 
             if (!Physics.Raycast(ned, transform.TransformDirection(Vector3.down), out hit1, 2*DISAPEAR_DIST, mask))
             {
-               
-
                 Destroy(gameObject);
             }
            
@@ -37,5 +35,14 @@ public class CheckGround : MonoBehaviour
 
             time += Time.deltaTime;
         }
+
+        LayerMask mask2 = LayerMask.GetMask("Enemies");
+
+        Vector3 ned2 = new Vector3(transform.position.x, transform.position.y - DISAPEAR_DIST, transform.position.z);
+        if (Physics.Raycast(ned2, transform.TransformDirection(Vector3.up), out hit1, 2 * DISAPEAR_DIST, mask2))
+        {
+            Destroy(gameObject);
+        }
+
     }
 }

@@ -4,6 +4,8 @@ using System.Collections;
 public class moving : MonoBehaviour
 {
     //Variables
+    public RectTransform hBar;
+    float bLength = .4f;
     public float speedF = 6.0F;
     public float Phealth = 1f;
     public float jumpSpeed = 8.0F;
@@ -12,6 +14,8 @@ public class moving : MonoBehaviour
     public AstarPath aP;
     public Animator Robot;
     float timer = .15f;
+    public FreeCam free;
+    public ChangeCamera cC;
     void Update()
     {
       
@@ -64,5 +68,24 @@ public class moving : MonoBehaviour
         Robot.SetFloat("Speed", Mathf.Abs(controller.velocity.x));
        
         controller.Move(moveDirection * Time.deltaTime);
+    }
+   public void Health(float Damage)
+    {
+        Phealth -= Damage/10;
+        bLength -= (Damage/100)*4;
+        if (bLength <= 0)
+        {
+            bLength = 0;
+            Robot.enabled = true;
+            Robot.Play("RobotArmature|Robot_Death");
+            Robot.GetComponentInParent<moving>().enabled = false;
+            Robot.GetComponentInParent<CharacterController>().enabled = false;
+            free.enabled = false;
+            cC.dead = true;
+        }
+
+
+        hBar.localScale = new Vector3(bLength, .09f, 1);
+
     }
 }
