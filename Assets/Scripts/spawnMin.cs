@@ -76,6 +76,14 @@ public class spawnMin : MonoBehaviour
             int x = Random.Range(0, 260);
             int y = Random.Range(0, 75);
             int z = Random.Range(0, 260);
+            temp = Instantiate(copper, new Vector3(x, y, z), Quaternion.identity);
+            temp.transform.parent = ParentOre.transform;
+        }
+        for (int q = 0; q < 100; q++)
+        {
+            int x = Random.Range(0, 260);
+            int y = Random.Range(0, 75);
+            int z = Random.Range(0, 260);
            temp =  Instantiate(emerald, new Vector3(x, y, z), Quaternion.identity);
             temp.transform.parent = ParentOre.transform;
         }
