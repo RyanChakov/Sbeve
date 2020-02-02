@@ -17,6 +17,7 @@ TagManager:
   - Pearl
   - Ruby
   - SmokyQuartz
+  - Destroy
   layers:
   - Default
   - TransparentFX

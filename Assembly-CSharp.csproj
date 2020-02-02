@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\DayNight.cs" />
     <Compile Include="Assets\Scripts\DensityGenerator.cs" />
     <Compile Include="Assets\Scripts\destory.cs" />
+    <Compile Include="Assets\Scripts\destory1.cs" />
     <Compile Include="Assets\Scripts\Destroy2.cs" />
     <Compile Include="Assets\Scripts\FreeCam.cs" />
     <Compile Include="Assets\Scripts\LookupTables.cs" />
