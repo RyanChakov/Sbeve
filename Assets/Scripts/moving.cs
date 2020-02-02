@@ -48,7 +48,7 @@ public class moving : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 timer = .15f;
-            if(Mathf.Abs(controller.velocity.x) >2)
+                if(Mathf.Abs(controller.velocity.x) >2)
                 {
                     Robot.Play("WalkJump2");
                 }
@@ -60,6 +60,18 @@ public class moving : MonoBehaviour
 
             }
 
+        }
+       
+        if(!controller.isGrounded)
+        {
+           if(Input.GetButton("Jump"))
+            {
+                moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                moveDirection = transform.TransformDirection(moveDirection);
+                speed = speedF;
+                moveDirection.y = jumpSpeed;
+                print("Test");
+            }
         }
         //Applying gravity to the controller
         moveDirection.y -= gravity * Time.deltaTime;
