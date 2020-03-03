@@ -8,7 +8,7 @@ public class FreeCam : MonoBehaviour
     public Skeleton SKL;
     public float freeLookSensitivity = 3f;
     public Animator Robot;
-    private bool looking;
+    private bool looking=true;
     int layerMask = 1 << 14;
     void Update()
     {
@@ -61,6 +61,7 @@ public class FreeCam : MonoBehaviour
        
         if (looking)
         {
+            
             float newRotationX = player.transform.localEulerAngles.y + Input.GetAxis("Mouse X") * freeLookSensitivity;
             float newRotationY = this.transform.localEulerAngles.x - Input.GetAxis("Mouse Y") * freeLookSensitivity;
           
@@ -74,23 +75,25 @@ public class FreeCam : MonoBehaviour
             this.transform.localEulerAngles = new Vector3(newRotationY, 0, 0f);
             
         }
-        
-        
 
-        StartLooking();
+
+
+       // StartLooking();
     }
 
     void OnDisable()
     {
       //  StopLooking();
     }
-
+    /*
    
     public void StartLooking()
     {
+        
         looking = true;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        
     }
 
    
@@ -100,7 +103,7 @@ public class FreeCam : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
-
+    */
     void attack()
     {
         

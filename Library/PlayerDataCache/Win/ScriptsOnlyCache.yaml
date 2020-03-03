@@ -10,6 +10,7 @@ ScriptsOnlyBuild:
     - PickUp
     - Skeleton
     - TerrainEditor
+    - UIp
     - World
     - destory
     - moving
@@ -24,6 +25,8 @@ ScriptsOnlyBuild:
     - Pathfinding.Seeker
     - Pathfinding.SimpleSmoothModifier
     - Pathfinding.UnityReferenceHelper
+    AstarPathfindingProjectEditor.dll:
+    - Pathfinding.AstarUpdateWindow
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -35,14 +38,9 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -97,56 +95,62 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9408}
     - Class: 114
-      Script: {instanceID: 9466}
+      Script: {instanceID: 9468}
     - Class: 114
-      Script: {instanceID: 9472}
+      Script: {instanceID: 9474}
     - Class: 114
-      Script: {instanceID: 9478}
+      Script: {instanceID: 9480}
     - Class: 114
-      Script: {instanceID: 9486}
+      Script: {instanceID: 9488}
     - Class: 114
-      Script: {instanceID: 9508}
+      Script: {instanceID: 9510}
     - Class: 114
-      Script: {instanceID: 9522}
+      Script: {instanceID: 9524}
     - Class: 114
-      Script: {instanceID: 9544}
+      Script: {instanceID: 9526}
     - Class: 114
-      Script: {instanceID: 9572}
+      Script: {instanceID: 9546}
     - Class: 114
-      Script: {instanceID: 9716}
+      Script: {instanceID: 9574}
     - Class: 114
-      Script: {instanceID: 9908}
+      Script: {instanceID: 9718}
     - Class: 114
-      Script: {instanceID: 9942}
+      Script: {instanceID: 9910}
     - Class: 114
-      Script: {instanceID: 9962}
+      Script: {instanceID: 9944}
     - Class: 114
-      Script: {instanceID: 10012}
+      Script: {instanceID: 9964}
     - Class: 114
-      Script: {instanceID: 10048}
+      Script: {instanceID: 10014}
     - Class: 114
-      Script: {instanceID: 10152}
+      Script: {instanceID: 10050}
     - Class: 114
-      Script: {instanceID: 10182}
+      Script: {instanceID: 10154}
     - Class: 114
       Script: {instanceID: 10184}
     - Class: 114
-      Script: {instanceID: 10208}
+      Script: {instanceID: 10186}
     - Class: 114
-      Script: {instanceID: 10216}
+      Script: {instanceID: 10210}
     - Class: 114
-      Script: {instanceID: 10414}
+      Script: {instanceID: 10218}
     - Class: 114
-      Script: {instanceID: 10570}
+      Script: {instanceID: 10380}
     - Class: 114
-      Script: {instanceID: 10576}
+      Script: {instanceID: 10418}
     - Class: 114
-      Script: {instanceID: 10726}
+      Script: {instanceID: 10574}
     - Class: 114
-      Script: {instanceID: 10770}
+      Script: {instanceID: 10580}
     - Class: 114
-      Script: {instanceID: 10844}
+      Script: {instanceID: 10730}
+    - Class: 114
+      Script: {instanceID: 10774}
+    - Class: 114
+      Script: {instanceID: 10848}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
@@ -192,35 +196,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9418}
     - Class: 114
-      Script: {instanceID: 9464}
-    - Class: 114
       Script: {instanceID: 9466}
     - Class: 114
-      Script: {instanceID: 9472}
+      Script: {instanceID: 9468}
     - Class: 114
-      Script: {instanceID: 9478}
+      Script: {instanceID: 9474}
     - Class: 114
-      Script: {instanceID: 9486}
+      Script: {instanceID: 9480}
     - Class: 114
-      Script: {instanceID: 9508}
+      Script: {instanceID: 9488}
     - Class: 114
-      Script: {instanceID: 9522}
+      Script: {instanceID: 9510}
     - Class: 114
       Script: {instanceID: 9524}
     - Class: 114
-      Script: {instanceID: 9930}
+      Script: {instanceID: 9526}
     - Class: 114
-      Script: {instanceID: 10282}
+      Script: {instanceID: 9932}
     - Class: 114
-      Script: {instanceID: 10372}
+      Script: {instanceID: 10284}
     - Class: 114
-      Script: {instanceID: 10386}
+      Script: {instanceID: 10374}
     - Class: 114
-      Script: {instanceID: 10478}
+      Script: {instanceID: 10390}
     - Class: 114
-      Script: {instanceID: 10566}
+      Script: {instanceID: 10482}
     - Class: 114
-      Script: {instanceID: 10878}
+      Script: {instanceID: 10570}
+    - Class: 114
+      Script: {instanceID: 10882}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -280,7 +284,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: cd1ea4dded672b0c8551f503e99868c0
+      Hash: be69556d73683c0af2221c41f2e2bc68
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PickUp
@@ -296,6 +300,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: rotate
+  - hash:
+      serializedVersion: 2
+      Hash: 9e4c5170e1e4250094d748726eb60611
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: destory1
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -508,6 +518,18 @@ ScriptsOnlyBuild:
     className: World
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
+  - hash:
+      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -706,7 +728,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 04fbaa3d661579aacb39dc2ef0ef0956
+      Hash: 047bab7f5472f656a877d42923a5b7f0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: spawnMin
@@ -932,6 +954,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 02e1e7abfb7ad5d61deba6d944bac9ef
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIp
   - hash:
       serializedVersion: 2
       Hash: e1300922cc039f41ab46a47f4cb05898
@@ -1176,4 +1204,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Starter.unity
   - Assets/Scenes/Main.unity
-  playerPath: E:/Users/Ryan/Desktop/GitUnity/All builds/Build1.9.3/Sbeve.exe
+  playerPath: E:/Users/Ryan/Desktop/GitUnity/All builds/Build19.56/Sbeve.exe
