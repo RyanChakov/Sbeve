@@ -20,7 +20,7 @@ public class moving : MonoBehaviour
     {
       
         AstarPath.active.Scan();
-        aP.astarData.gridGraph.center = new Vector3(transform.position.x, transform.position.y-80, transform.position.z);
+        aP.astarData.gridGraph.center = new Vector3(transform.position.x, transform.position.y-30, transform.position.z);
 
         float speed = speedF;
         CharacterController controller = GetComponent<CharacterController>();

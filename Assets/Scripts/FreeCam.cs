@@ -8,7 +8,7 @@ public class FreeCam : MonoBehaviour
     public Skeleton SKL;
     public float freeLookSensitivity = 3f;
     public Animator Robot;
-    private bool looking=true;
+    public bool looking=true;
     int layerMask = 1 << 14;
     void Update()
     {

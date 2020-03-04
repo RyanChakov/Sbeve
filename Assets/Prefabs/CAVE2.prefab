@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &6162527307821183505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147877150741209070}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13bb016b02f2e4488641468ea42f882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8363067888796640097
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,6 +54,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cave
+      objectReference: {fileID: 0}
+    - target: {fileID: 3692335449589631530, guid: 8a97c9810ded91447bf6e870790dcb0a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Destroy
       objectReference: {fileID: 0}
     - target: {fileID: 3692335449589631525, guid: 8a97c9810ded91447bf6e870790dcb0a,
         type: 3}
@@ -133,6 +150,12 @@ PrefabInstance:
 --- !u!4 &8993681006966429097 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3692335449589631525, guid: 8a97c9810ded91447bf6e870790dcb0a,
+    type: 3}
+  m_PrefabInstance: {fileID: 5760727067246600076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1147877150741209070 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4619605324687573090, guid: 8a97c9810ded91447bf6e870790dcb0a,
     type: 3}
   m_PrefabInstance: {fileID: 5760727067246600076}
   m_PrefabAsset: {fileID: 0}

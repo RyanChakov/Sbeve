@@ -60,11 +60,13 @@ public class destory : MonoBehaviour
                 {
                     if (hits[i].CompareTag("Player"))
                     {
+                        print(hits[i].tag+" THIS IS THE TAG");
                         return;
                     }
+                    
                 }
             }
-
+            
             EditTerrain1(hitPoint, addTerrain, force, range);
             // point, false, 2,2
             

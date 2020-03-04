@@ -5,13 +5,25 @@ using UnityEngine;
 public class UIp : MonoBehaviour
 {
     public FreeCam FC;
-   public GameObject Inventory;
+    public GameObject Inventory;
     public GameObject Shop;
     public GameObject cam;
     RaycastHit hit = new RaycastHit();
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
         if (Input.GetKeyDown(KeyCode.I))
         {
             Inventory.SetActive(!Inventory.activeSelf);
@@ -26,15 +38,26 @@ public class UIp : MonoBehaviour
                 }
                 if (Shop.activeSelf)
                 {
+                    FC.looking = false;
                     Cursor.visible = true;
                     Cursor.lockState = CursorLockMode.None;
                 }
                 else
                 {
+                    FC.looking = true;
                     Cursor.visible = false;
                     Cursor.lockState = CursorLockMode.Locked;
                 }
             }
+           
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            FC.looking = true;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Inventory.SetActive(false);
+            Shop.SetActive(false);
         }
     }
     
