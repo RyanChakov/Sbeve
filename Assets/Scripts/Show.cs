@@ -11,7 +11,7 @@ public class Show : MonoBehaviour
     public moving health;
     void Update()
     {
-        money = Robot.GetComponentInChildren<PickUp>().money;
+        money = Robot.GetComponentInChildren<PickUp>().totalmoney;
         health = Robot.GetComponentInChildren<moving>();
     }
     public void ShowIt()
@@ -24,12 +24,6 @@ public class Show : MonoBehaviour
         anything.SetActive(false);
 
     }
-
-    public void healer()
-    {
-        print("IM COFUSED");
-    }
-    
     public void Heal2(float healthAddCost)
     {
         //super weird bug cant pass multiples things through to the first number is heal added the next 3 numbers are the cost

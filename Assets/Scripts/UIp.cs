@@ -10,6 +10,11 @@ public class UIp : MonoBehaviour
     public GameObject cam;
     RaycastHit hit = new RaycastHit();
     // Update is called once per frame
+    void Start()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.T))
@@ -49,7 +54,7 @@ public class UIp : MonoBehaviour
                     Cursor.lockState = CursorLockMode.Locked;
                 }
             }
-           
+
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -60,5 +65,5 @@ public class UIp : MonoBehaviour
             Shop.SetActive(false);
         }
     }
-    
+
 }

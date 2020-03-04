@@ -900,7 +900,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1e-45, y: 1.3727731e-34, z: 8.1147766e+37, w: 4.64928e-40}
+  m_BoundingSphereOverride: {x: 0, y: 7.9316175e+34, z: 2.7081723e+23, w: 1.5e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2081,16 +2081,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: -5259225927154676129, guid: 4fb80653cc51ba64d9d5582729c7e239,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1314725347938990163, guid: 4fb80653cc51ba64d9d5582729c7e239,
-        type: 3}
-      propertyPath: m_Layer
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: -9173469427219518847, guid: 4fb80653cc51ba64d9d5582729c7e239,
         type: 3}
       propertyPath: m_Layer
@@ -2117,6 +2107,11 @@ PrefabInstance:
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -5324251996373819952, guid: 4fb80653cc51ba64d9d5582729c7e239,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: -5259225927154676129, guid: 4fb80653cc51ba64d9d5582729c7e239,
         type: 3}
       propertyPath: m_Layer
       value: 14
@@ -2197,6 +2192,11 @@ PrefabInstance:
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 880781357333504162, guid: 4fb80653cc51ba64d9d5582729c7e239,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314725347938990163, guid: 4fb80653cc51ba64d9d5582729c7e239,
         type: 3}
       propertyPath: m_Layer
       value: 14
@@ -5153,16 +5153,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 129350255495253916, guid: 8bda71f744158054fb21437792bcf9d1,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 129350255495253916, guid: 8bda71f744158054fb21437792bcf9d1,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: -8037813013048751557, guid: 8bda71f744158054fb21437792bcf9d1,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5314,6 +5304,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -449896630628447607, guid: 8bda71f744158054fb21437792bcf9d1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 129350255495253916, guid: 8bda71f744158054fb21437792bcf9d1,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 129350255495253916, guid: 8bda71f744158054fb21437792bcf9d1,
         type: 3}
       propertyPath: m_Layer
       value: 12
@@ -8016,9 +8016,9 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 493bfb50af5d9424da505ba945c86600, type: 2}
   - {fileID: 2100000, guid: 97637a2a763b7f24b8da4e139e4144ca, type: 2}
   cycleT: 2
-  timer: 0
   slow: 0
   slows: 0
+  longDay: 0.01
   timercount: 0
 --- !u!1 &1243009837 stripped
 GameObject:
