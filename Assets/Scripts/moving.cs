@@ -16,6 +16,7 @@ public class moving : MonoBehaviour
     float timer = .15f;
     public FreeCam free;
     public ChangeCamera cC;
+    public bool JetOn=false;
     void Update()
     {
       
@@ -64,7 +65,7 @@ public class moving : MonoBehaviour
        
         if(!controller.isGrounded)
         {
-           if(Input.GetButton("Jump"))
+           if(Input.GetButton("Jump") && JetOn)
             {
                 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
                 moveDirection = transform.TransformDirection(moveDirection);

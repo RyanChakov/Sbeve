@@ -900,7 +900,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: -2.99208e+22, z: 8.1e-43, w: -2.99208e+22}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2317,6 +2317,7 @@ MonoBehaviour:
   Robot: {fileID: 8296172667580372144}
   free: {fileID: 534669907}
   cC: {fileID: 878849793}
+  JetOn: 0
 --- !u!1001 &405036538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5126,6 +5127,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1206770683}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &830779414 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4361846107689579465, guid: 41e70cbbb1cf4754f8a70221565cf334,
+    type: 3}
+  m_PrefabInstance: {fileID: 1206770683}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830779412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5cd6d432fd58e54ea00a41b42f1fbca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &854929586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7721,6 +7734,49 @@ PrefabInstance:
       propertyPath: money
       value: 
       objectReference: {fileID: 1166891523}
+    - target: {fileID: 4361846107689579465, guid: 41e70cbbb1cf4754f8a70221565cf334,
+        type: 3}
+      propertyPath: JetPack
+      value: 
+      objectReference: {fileID: 1265927840}
+    - target: {fileID: 1832489577, guid: 41e70cbbb1cf4754f8a70221565cf334, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832489577, guid: 41e70cbbb1cf4754f8a70221565cf334, type: 3}
+      propertyPath: m_Name
+      value: JetpackWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883038734924088795, guid: 41e70cbbb1cf4754f8a70221565cf334,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 830779414}
+    - target: {fileID: 7883038734924088795, guid: 41e70cbbb1cf4754f8a70221565cf334,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: JetPackOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883038734924088795, guid: 41e70cbbb1cf4754f8a70221565cf334,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883038734924088795, guid: 41e70cbbb1cf4754f8a70221565cf334,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883038734924088795, guid: 41e70cbbb1cf4754f8a70221565cf334,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883038734924088795, guid: 41e70cbbb1cf4754f8a70221565cf334,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41e70cbbb1cf4754f8a70221565cf334, type: 3}
 --- !u!1 &1214323456 stripped
@@ -8075,6 +8131,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -2432090755550338912, guid: 99821dce58739a04daa9944fa1694ed5, type: 3}
+--- !u!1 &1265927840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 59d53317e86af2f43967ffba060733c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1572564364}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1267486665 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2534866581884222612, guid: b32539fe9d257a848a69f5d0c183ab72,
@@ -9744,6 +9806,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Jetpack
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 59d53317e86af2f43967ffba060733c7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 59d53317e86af2f43967ffba060733c7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Jet
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 59d53317e86af2f43967ffba060733c7,
         type: 3}

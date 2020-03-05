@@ -18,6 +18,7 @@ TagManager:
   - Ruby
   - SmokyQuartz
   - Destroy
+  - Jet
   layers:
   - Default
   - TransparentFX

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Show : MonoBehaviour
 {
-    
-   
+
+    public GameObject JetPack;
     public GameObject Robot;
     public PickUp money;
     public moving health;
@@ -35,6 +35,21 @@ public class Show : MonoBehaviour
             money.Buy(cost);
             print("This is the health:" + healthAdd + " and this is the cost:" + cost);
             health.Health(-healthAdd);
+        }
+
+    }
+    public void JetPackOn(float cost)
+    {
+       
+
+        
+        if (cost <= money.money)
+        {
+            money.Buy(cost);
+            health.JetOn = true;
+           JetPack.SetActive(true);
+            
+            
         }
 
     }
