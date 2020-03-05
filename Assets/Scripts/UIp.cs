@@ -8,6 +8,7 @@ public class UIp : MonoBehaviour
     public GameObject Inventory;
     public GameObject Shop;
     public GameObject cam;
+    public GameObject esc;
     RaycastHit hit = new RaycastHit();
     // Update is called once per frame
     void Start()
@@ -17,18 +18,6 @@ public class UIp : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Y))
-        {
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-
         if (Input.GetKeyDown(KeyCode.I))
         {
             Inventory.SetActive(!Inventory.activeSelf);
@@ -58,11 +47,23 @@ public class UIp : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            FC.looking = true;
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            Inventory.SetActive(false);
-            Shop.SetActive(false);
+           
+            if (Inventory.activeSelf || Shop.activeSelf || esc.activeSelf)
+            {
+                FC.looking = true;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                Inventory.SetActive(false);
+                Shop.SetActive(false);
+                esc.SetActive(false);
+            }
+            else
+            {
+                FC.looking = false;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                esc.SetActive(true);
+            }
         }
     }
 
