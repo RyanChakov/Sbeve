@@ -5,21 +5,21 @@ using UnityEngine;
 public class Show : MonoBehaviour
 {
     
-    public GameObject anything;
+   
     public GameObject Robot;
-    public float money;
+    public PickUp money;
     public moving health;
     void Update()
     {
-        money = Robot.GetComponentInChildren<PickUp>().totalmoney;
+        money = Robot.GetComponentInChildren<PickUp>();
         health = Robot.GetComponentInChildren<moving>();
     }
-    public void ShowIt()
+    public void ShowIt(GameObject anything)
     {
         anything.SetActive(true);
         
     }
-    public void UnShowIt()
+    public void UnShowIt(GameObject anything)
     {
         anything.SetActive(false);
 
@@ -30,9 +30,9 @@ public class Show : MonoBehaviour
         
         float cost = healthAddCost%1000;
         float healthAdd = (healthAddCost - cost) / 1000;
-        if (cost <= money)
+        if (cost <= money.money)
         {
-            money -= cost;
+            money.Buy(cost);
             print("This is the health:" + healthAdd + " and this is the cost:" + cost);
             health.Health(-healthAdd);
         }

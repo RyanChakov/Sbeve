@@ -145,6 +145,11 @@ PrefabInstance:
       propertyPath: constrainInsideGraph
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3692335449955192423, guid: 8a97c9810ded91447bf6e870790dcb0a,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a97c9810ded91447bf6e870790dcb0a, type: 3}
 --- !u!4 &8993681006966429097 stripped

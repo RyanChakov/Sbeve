@@ -10,13 +10,13 @@ public class PickUp : MonoBehaviour
     public Text[] oresText = new Text[13];
     int[] oresInt = new int[13];
     string[] oresNames = new string[13];
-    public int money = 0, totalmoney = 0;
+    public float money = 0, totalmoney = 0;
     public float newScale = 0;
     public GameObject slime;
 
     void Start()
     {
-        for (int y=0; y<13; y++)
+        for (int y = 0; y < 13; y++)
         {
             oresInt[y] = 0;
         }
@@ -39,12 +39,13 @@ public class PickUp : MonoBehaviour
 
     void Update()
     {
-        
+
         GameObject test;
         LayerMask mask = LayerMask.GetMask("Ore");
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+
             if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, 10f))
             {
                 if (hit.collider.gameObject.layer == 9)
@@ -139,9 +140,14 @@ public class PickUp : MonoBehaviour
 
         for (int y = 0; y < 13; y++)
         {
-            oresText[y].text = oresNames[y]+":"+oresInt[y].ToString();
+            oresText[y].text = oresNames[y] + ":" + oresInt[y].ToString();
         }
         moneyText.text = "Nuts & Bolts:" + money;
+    }
+
+    public void Buy(float cost)
+    {
+        money -= cost;
     }
 }
 

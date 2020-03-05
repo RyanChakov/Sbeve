@@ -900,7 +900,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 7.9316175e+34, z: 2.7081723e+23, w: 1.5e-43}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7706,6 +7706,21 @@ PrefabInstance:
       propertyPath: Robot
       value: 
       objectReference: {fileID: 8296172667580372143}
+    - target: {fileID: 4361846107689579465, guid: 41e70cbbb1cf4754f8a70221565cf334,
+        type: 3}
+      propertyPath: Robot
+      value: 
+      objectReference: {fileID: 8296172667580372143}
+    - target: {fileID: 4361846107689579465, guid: 41e70cbbb1cf4754f8a70221565cf334,
+        type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 401677599}
+    - target: {fileID: 4361846107689579465, guid: 41e70cbbb1cf4754f8a70221565cf334,
+        type: 3}
+      propertyPath: money
+      value: 
+      objectReference: {fileID: 1166891523}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41e70cbbb1cf4754f8a70221565cf334, type: 3}
 --- !u!1 &1214323456 stripped
