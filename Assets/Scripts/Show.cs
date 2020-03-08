@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Show : MonoBehaviour
 {
-
+    public FreeCam FC;
     public GameObject JetPack;
     public GameObject Robot;
     public PickUp money;
@@ -22,6 +22,13 @@ public class Show : MonoBehaviour
     public void UnShowIt(GameObject anything)
     {
         anything.SetActive(false);
+
+    }
+    public void Closing()
+    {
+        FC.looking = true;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
     }
     public void Heal2(float healthAddCost)

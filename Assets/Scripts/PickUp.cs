@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class PickUp : MonoBehaviour
 {
     public GameObject cam;
     RaycastHit hit = new RaycastHit();
-    public Text moneyText;
-    public Text[] oresText = new Text[13];
+    public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI[] oresText = new TextMeshProUGUI[13];
     int[] oresInt = new int[13];
     string[] oresNames = new string[13];
     public float money = 0, totalmoney = 0;
@@ -140,9 +141,9 @@ public class PickUp : MonoBehaviour
 
         for (int y = 0; y < 13; y++)
         {
-            oresText[y].text = oresNames[y] + ":" + oresInt[y].ToString();
+            oresText[y].text = ""+oresInt[y].ToString();
         }
-        moneyText.text = "Nuts & Bolts:" + money;
+        moneyText.text = ""+money;
     }
 
     public void Buy(float cost)

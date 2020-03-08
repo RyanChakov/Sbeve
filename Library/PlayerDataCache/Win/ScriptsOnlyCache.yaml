@@ -8,7 +8,9 @@ ScriptsOnlyBuild:
     - Cycle
     - DestoryDestroy
     - FreeCam
+    - PRessIns
     - PickUp
+    - Quit
     - Show
     - Skeleton
     - SkeletonFix
@@ -34,13 +36,14 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    Unity.VectorGraphics.dll:
-    - SVGImage
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -99,6 +102,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9408}
     - Class: 114
+      Script: {instanceID: 9466}
+    - Class: 114
       Script: {instanceID: 9468}
     - Class: 114
       Script: {instanceID: 9474}
@@ -147,23 +152,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10224}
     - Class: 114
-      Script: {instanceID: 10380}
+      Script: {instanceID: 10382}
     - Class: 114
-      Script: {instanceID: 10386}
+      Script: {instanceID: 10388}
     - Class: 114
-      Script: {instanceID: 10424}
+      Script: {instanceID: 10426}
     - Class: 114
-      Script: {instanceID: 10576}
+      Script: {instanceID: 10578}
     - Class: 114
-      Script: {instanceID: 10580}
+      Script: {instanceID: 10582}
     - Class: 114
-      Script: {instanceID: 10586}
+      Script: {instanceID: 10588}
     - Class: 114
-      Script: {instanceID: 10736}
+      Script: {instanceID: 10738}
     - Class: 114
-      Script: {instanceID: 10780}
+      Script: {instanceID: 10782}
     - Class: 114
-      Script: {instanceID: 10854}
+      Script: {instanceID: 10856}
+    - Class: 114
+      Script: {instanceID: 11040}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -230,17 +237,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9934}
     - Class: 114
-      Script: {instanceID: 10290}
+      Script: {instanceID: 10318}
     - Class: 114
-      Script: {instanceID: 10380}
+      Script: {instanceID: 10382}
     - Class: 114
-      Script: {instanceID: 10396}
+      Script: {instanceID: 10398}
     - Class: 114
-      Script: {instanceID: 10488}
+      Script: {instanceID: 10490}
     - Class: 114
-      Script: {instanceID: 10576}
+      Script: {instanceID: 10578}
     - Class: 114
-      Script: {instanceID: 10888}
+      Script: {instanceID: 10890}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -300,7 +307,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: be69556d73683c0af2221c41f2e2bc68
+      Hash: be5e3eb005031438be67f9823c51c648
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PickUp
@@ -534,18 +541,6 @@ ScriptsOnlyBuild:
     className: World
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements
-    className: CallbackExecutor
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.Advertisements.dll
-    namespaceName: UnityEngine.Advertisements.Editor
-    className: Placeholder
-  - hash:
-      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -762,7 +757,7 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: 1f14bd9ce422d236c61049dd51721b4a
+      Hash: 8ca3c9a46b0c5af03a04186edd731048
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Show
@@ -804,7 +799,7 @@ ScriptsOnlyBuild:
     className: AnalyticsTracker
   - hash:
       serializedVersion: 2
-      Hash: 0f179014d939db48f13f41ef163d71c0
+      Hash: ded50468bbc866c82a45e9f1e97a3a5f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Cycle
@@ -954,7 +949,7 @@ ScriptsOnlyBuild:
     className: Skeleton
   - hash:
       serializedVersion: 2
-      Hash: 89c93ea9f106ee088253c06882aef8ee
+      Hash: 949577bd9db84573cc03bfb53b1c27c7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: moving
@@ -964,6 +959,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VectorGraphics.dll
     namespaceName: 
     className: SVGImage
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PRessIns
   - hash:
       serializedVersion: 2
       Hash: e7af7273c8177a5779551d022b323d84
@@ -990,7 +991,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: 2c62563f1b41e058b954faa64fe58d3b
+      Hash: fc10e9f94fa4095f878d795f879bab4d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIp
@@ -1224,6 +1225,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Quit
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1238,4 +1245,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Starter.unity
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/student/Documents/Unity Games/AllBuilds/Build1.9.5/Sbeve.exe
+  playerPath: E:/Users/Ryan/Desktop/GitUnity/All builds/Build1.9.8.5/Sbeve.exe

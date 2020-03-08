@@ -7,7 +7,8 @@ public class moving : MonoBehaviour
     public RectTransform hBar;
     float bLength = .4f;
     public float speedF = 6.0F;
-    public float Phealth = 1f;
+    public int Phealth = 10;
+    public int PTemphealth = 10;
     public float jumpSpeed = 8.0F;
     public float gravity = 20.0F;
     private Vector3 moveDirection = Vector3.zero;
@@ -17,6 +18,7 @@ public class moving : MonoBehaviour
     public FreeCam free;
     public ChangeCamera cC;
     public bool JetOn=false;
+    public GameObject[] Healthbars= new GameObject[10];
     void Update()
     {
       
@@ -84,11 +86,12 @@ public class moving : MonoBehaviour
     }
    public void Health(float Damage)
     {
-        Phealth -= Damage/10;
-        bLength -= (Damage/100)*4;
-        if (bLength <= 0)
+       
+        Phealth -=  (int) Damage;
+        
+        if (Phealth <= 0)
         {
-            bLength = 0;
+            Phealth = 0;
             Robot.enabled = true;
             Robot.Play("RobotArmature|Robot_Death");
             Robot.GetComponentInParent<moving>().enabled = false;
@@ -96,9 +99,14 @@ public class moving : MonoBehaviour
             free.enabled = false;
             cC.dead = true;
         }
-
-
-        hBar.localScale = new Vector3(bLength, .09f, 1);
-
+        if(Phealth >10)
+        {
+            Phealth = 10;
+        }
+        for (int i = PTemphealth; i > Phealth; i--)
+        {
+            Healthbars[i-1].SetActive(false);
+        }
+        PTemphealth = Phealth;
     }
 }

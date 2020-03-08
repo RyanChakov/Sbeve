@@ -71,7 +71,19 @@ public class World : MonoBehaviour
         int newY = Utils.FloorToNearestX(y, chunkSize);
         int newZ = Utils.FloorToNearestX(z, chunkSize);
 
+        if (!chunks.ContainsKey(new Vector3Int(newX, newY, newZ)))
+        {
+            Debug.Log("hey! this chunk is no good! " + new Vector3Int(newX, newY, newZ));
+            return null;
+        }
+        if(newY<0 || newX <0 || newZ <0)
+        {
+            newX = 1000;
+            newY = 1000;
+            newZ = 1000;
+        }
         return chunks[new Vector3Int(newX, newY, newZ)];
+
     }
 
     public float GetDensity(int x, int y, int z)
