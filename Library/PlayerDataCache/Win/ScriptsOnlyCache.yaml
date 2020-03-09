@@ -39,11 +39,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateMachineNode
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -541,6 +538,18 @@ ScriptsOnlyBuild:
     className: World
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements
+    className: CallbackExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.Advertisements.dll
+    namespaceName: UnityEngine.Advertisements.Editor
+    className: Placeholder
+  - hash:
+      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -757,7 +766,7 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: 8ca3c9a46b0c5af03a04186edd731048
+      Hash: cd5c008dd718fc4f8dcfbbf4d89da61c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Show
@@ -1245,4 +1254,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Starter.unity
   - Assets/Scenes/Main.unity
-  playerPath: E:/Users/Ryan/Desktop/GitUnity/All builds/Build1.9.8.5/Sbeve.exe
+  playerPath: C:/Users/student/Documents/Unity Games/AllBuilds/Build1.9.6/Sbeve.exe

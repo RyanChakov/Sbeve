@@ -11,6 +11,8 @@ public class World : MonoBehaviour
     public int worldHeight = 5;
     public int worldDepth = 5;
 
+    public bool starter = false;
+
     public float isolevel;
 
     public int seed;
@@ -170,12 +172,30 @@ public class World : MonoBehaviour
     
     public void CreateChunk(int x, int y, int z)
     {
+        if(starter)
+        {
+           if(y==100)
+            { 
+                Vector3Int position = new Vector3Int(x, y, z);
+
+                Chunk chunk = Instantiate(chunkPrefab, position, Quaternion.identity).GetComponent<Chunk>();
+                chunk.Initialize(this, chunkSize, position);
+                chunk.transform.parent = ParentChunk.transform;
+                chunks.Add(position, chunk);
+            }
+
+        }
+        else
+        {
+
+        
         Vector3Int position = new Vector3Int(x, y, z);
 
         Chunk chunk = Instantiate(chunkPrefab, position, Quaternion.identity).GetComponent<Chunk>();
         chunk.Initialize(this, chunkSize, position);
         chunk.transform.parent = ParentChunk.transform;
         chunks.Add(position, chunk);
+        }
     }
     
 }
