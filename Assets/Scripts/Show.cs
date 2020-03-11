@@ -45,6 +45,20 @@ public class Show : MonoBehaviour
         }
 
     }
+    public void Shield(float healthAddCost)
+    {
+        //super weird bug cant pass multiples things through to the first number is heal added the next 3 numbers are the cost
+
+        float cost = healthAddCost % 1000;
+        float healthAdd = (healthAddCost - cost) / 1000;
+        if (cost <= money.money)
+        {
+            money.Buy(cost);
+            print("This is the health:" + healthAdd + " and this is the cost:" + cost);
+            health.Shield(healthAdd);
+        }
+
+    }
     public void JetPackOn(float cost)
     {
        
