@@ -11,7 +11,7 @@ public class moving : MonoBehaviour
     public int PTemphealth = 10;
     public float jumpSpeed = 8.0F;
     public float gravity = 20.0F;
-    private Vector3 moveDirection = Vector3.zero;
+    public Vector3 moveDirection = Vector3.zero;
     public AstarPath aP;
     public Animator Robot;
     float timer = .15f;
@@ -139,4 +139,19 @@ public class moving : MonoBehaviour
         }
         PTemphealth = Phealth;
     }
+    public void Tramp(float jump)
+    {
+        CharacterController controller = GetComponent<CharacterController>();
+        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        moveDirection = transform.TransformDirection(moveDirection);
+        moveDirection.y = jump;
+        //Applying gravity to the controller
+        moveDirection.y -= gravity * Time.deltaTime;
+        //Making the character move
+
+        Robot.SetFloat("Speed", Mathf.Abs(controller.velocity.x));
+
+        controller.Move(moveDirection * Time.deltaTime);
+    }
+
 }
