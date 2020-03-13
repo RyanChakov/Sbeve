@@ -6,6 +6,7 @@ public class Trampoline : MonoBehaviour
 {
     public Transform end;
     public Transform start;
+    public moving health;
     void Start()
     {
 
@@ -22,15 +23,23 @@ public class Trampoline : MonoBehaviour
         if (hit.collider.tag == "Trampoline")
         {
 
-            transform.position = new Vector3(end.position.x+10,end.position.y+10, end.position.z);
-         
+            transform.position = new Vector3(end.position.x + 10, end.position.y + 10, end.position.z);
+
         }
 
         if (hit.collider.tag == "Teleporter")
         {
 
-            transform.position = new Vector3(start.position.x+10, start.position.y + 10, start.position.z);
+            transform.position = new Vector3(start.position.x + 10, start.position.y + 10, start.position.z);
 
         }
+
+        if (hit.collider.tag == "Death")
+        {
+
+            health.Health(100);
+        }
+
+
     }
 }

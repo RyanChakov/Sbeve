@@ -22,6 +22,7 @@ TagManager:
   - Health
   - Trampoline
   - Teleporter
+  - Death
   layers:
   - Default
   - TransparentFX

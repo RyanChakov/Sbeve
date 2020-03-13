@@ -8,9 +8,10 @@ public class moving : MonoBehaviour
     float bLength = .4f;
     public float speedF = 6.0F;
     public int Phealth = 10;
-    public int PTemphealth = 10;
+    public int PTemphealth = 10, tempFuelLevel = 10;
     public float jumpSpeed = 8.0F;
     public float gravity = 20.0F;
+    public float fuelLevel = 10f;
     public Vector3 moveDirection = Vector3.zero;
     public AstarPath aP;
     public Animator Robot;
@@ -21,8 +22,16 @@ public class moving : MonoBehaviour
     public bool JetOn = false, shid = false;
     public GameObject[] Healthbars = new GameObject[10];
     public GameObject[] Shieldbars = new GameObject[10];
+    public GameObject[] Fuelbars = new GameObject[10];
     void Update()
     {
+        if (JetOn && fuelLevel == 10)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Fuelbars[i].SetActive(true);
+            }
+        }
 
         AstarPath.active.Scan();
         aP.astarData.gridGraph.center = new Vector3(transform.position.x, transform.position.y - 30, transform.position.z);
@@ -64,18 +73,19 @@ public class moving : MonoBehaviour
                 moveDirection.y = jumpSpeed;
 
             }
-
+            if (JetOn)
+                Fuel(-Time.deltaTime);
         }
 
         if (!controller.isGrounded)
         {
-            if (Input.GetButton("Jump") && JetOn)
+            if (Input.GetButton("Jump") && JetOn && fuelLevel > 0)
             {
                 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
                 moveDirection = transform.TransformDirection(moveDirection);
                 speed = speedF;
                 moveDirection.y = jumpSpeed;
-                print("Test");
+                Fuel(Time.deltaTime * 1.5f);
             }
         }
         //Applying gravity to the controller
@@ -153,5 +163,34 @@ public class moving : MonoBehaviour
 
         controller.Move(moveDirection * Time.deltaTime);
     }
+    public void Fuel(float fueld)
+    {
+        fuelLevel -= fueld;
+        if (fuelLevel < 0)
+        {
+            fuelLevel = 0;
+        }
+        else if (fuelLevel > 10)
+        {
+            fuelLevel = 10;
+        }
+        if (fueld > 0)
+        {
+            for (int i = 9; i >= (int)fuelLevel; i--)
+            {
 
+                Fuelbars[i].SetActive(false);
+            }
+        }
+        else
+        {
+            for (int i = tempFuelLevel; i < (int)fuelLevel; i++)
+            {
+
+                Fuelbars[i].SetActive(true);
+            }
+        }
+        tempFuelLevel = (int)fuelLevel;
+    }
+   
 }
