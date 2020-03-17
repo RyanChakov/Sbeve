@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7489232383384105728}
   - component: {fileID: 7489232383384105729}
   - component: {fileID: 3188894166918131530}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Chunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,9 +57,9 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7489232383384105734}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

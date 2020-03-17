@@ -181,13 +181,18 @@ public class World : MonoBehaviour
         else
         {
 
-
+           
             Vector3Int position = new Vector3Int(x, y, z);
 
             Chunk chunk = Instantiate(chunkPrefab, position, Quaternion.identity).GetComponent<Chunk>();
             chunk.Initialize(this, chunkSize, position);
             chunk.transform.parent = ParentChunk.transform;
             chunks.Add(position, chunk);
+            /*if (y == 100)
+            {
+                chunk.gameObject.layer = 11;
+            }
+            */
         }
     }
 
