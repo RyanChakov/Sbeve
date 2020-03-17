@@ -14,7 +14,7 @@ public class PickUp : MonoBehaviour
     public float money = 0, totalmoney = 0;
     public float newScale = 0;
     public GameObject slime;
-
+    public AudioSource collect;
     void Start()
     {
         for (int y = 0; y < 13; y++)
@@ -51,6 +51,7 @@ public class PickUp : MonoBehaviour
             {
                 if (hit.collider.gameObject.layer == 9)
                 {
+                    collect.Play();
                     switch (hit.collider.tag)
                     {
                         case "Amber":
@@ -126,29 +127,21 @@ public class PickUp : MonoBehaviour
                     money = (oresInt[0] * 20) + (oresInt[1] * 20) + (oresInt[2] * 20) + (oresInt[3] * 10) + (oresInt[4] * 20) + (oresInt[5] * 30) + (oresInt[6] * 20) + (oresInt[7] * 50) + (oresInt[8] * 20) + (oresInt[9] * 20) + (oresInt[10] * 20) + (oresInt[11] * 40) + (oresInt[12] * 20);
                     totalmoney += money;
                     oresInt[0] = oresInt[1] = oresInt[2] = oresInt[3] = oresInt[4] = oresInt[5] = oresInt[6] = oresInt[7] = oresInt[8] = oresInt[9] = oresInt[10] = oresInt[11] = oresInt[12] = 0;
-                    print("here");
-
-                    print(money);
                     slime.transform.localScale += new Vector3(money / 200, money / 200, money / 200);
                 }
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            print(string.Format("Money: {0}", money));
-        }
-
         for (int y = 0; y < 13; y++)
         {
-            oresText[y].text = ""+oresInt[y].ToString();
+            oresText[y].text = "" + oresInt[y].ToString();
         }
-        moneyText.text = ""+money;
+        moneyText.text = "" + totalmoney;
     }
 
     public void Buy(float cost)
     {
-        money -= cost;
+        totalmoney -= cost;
     }
 }
 

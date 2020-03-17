@@ -34,16 +34,16 @@ public class World : MonoBehaviour
     {
         Gizmos.DrawWireCube(worldBounds.center, worldBounds.size);
     }
-    
+
     private void Start()
     {
         worldBounds = new Bounds();
         UpdateBounds();
 
-        chunks = new Dictionary<Vector3Int, Chunk>(worldWidth*worldHeight*worldDepth);
+        chunks = new Dictionary<Vector3Int, Chunk>(worldWidth * worldHeight * worldDepth);
         CreateChunks();
     }
-    
+
     private void CreateChunks()
     {
 
@@ -61,7 +61,7 @@ public class World : MonoBehaviour
 
         Debug.Log("Time: " + (DateTime.Now.Second - t));
     }
-    
+
     private Chunk GetChunk(Vector3Int pos)
     {
         return GetChunk(pos.x, pos.y, pos.z);
@@ -69,22 +69,15 @@ public class World : MonoBehaviour
 
     public Chunk GetChunk(int x, int y, int z)
     {
+
         int newX = Utils.FloorToNearestX(x, chunkSize);
         int newY = Utils.FloorToNearestX(y, chunkSize);
         int newZ = Utils.FloorToNearestX(z, chunkSize);
 
-        if (!chunks.ContainsKey(new Vector3Int(newX, newY, newZ)))
-        {
-            Debug.Log("hey! this chunk is no good! " + new Vector3Int(newX, newY, newZ));
-            return null;
-        }
-        if(newY<0 || newX <0 || newZ <0)
-        {
-            newX = 1000;
-            newY = 1000;
-            newZ = 1000;
-        }
-        return chunks[new Vector3Int(newX, newY, newZ)];
+
+
+
+        return chunks[new Vector3Int(Math.Abs(Utils.FloorToNearestX(x, chunkSize)), Math.Abs(Utils.FloorToNearestX(y, chunkSize)), Math.Abs(Utils.FloorToNearestX(z, chunkSize)))];
 
     }
 
@@ -127,13 +120,13 @@ public class World : MonoBehaviour
             }
 
             Chunk chunk = GetChunk(chunkPos);
-            
+
             lastChunkPos = chunk.position;
 
             Vector3Int localPos = (dp - chunk.position).Mod(chunkSize + 1);
 
             chunk.SetDensity(density, localPos);
-            if (setReadyForUpdate) 
+            if (setReadyForUpdate)
                 chunk.readyForUpdate = true;
         }
     }
@@ -148,7 +141,7 @@ public class World : MonoBehaviour
         float middleX = worldWidth * chunkSize / 2f;
         float middleY = worldHeight * chunkSize / 2f;
         float middleZ = worldDepth * chunkSize / 2f;
-        
+
         Vector3 midPos = new Vector3(middleX, middleY, middleZ);
 
         Vector3Int size = new Vector3Int(
@@ -169,13 +162,13 @@ public class World : MonoBehaviour
     {
         return worldBounds.Contains(point);
     }
-    
+
     public void CreateChunk(int x, int y, int z)
     {
-        if(starter)
+        if (starter)
         {
-           if(y==100)
-            { 
+            if (y == 100)
+            {
                 Vector3Int position = new Vector3Int(x, y, z);
 
                 Chunk chunk = Instantiate(chunkPrefab, position, Quaternion.identity).GetComponent<Chunk>();
@@ -188,15 +181,15 @@ public class World : MonoBehaviour
         else
         {
 
-        
-        Vector3Int position = new Vector3Int(x, y, z);
 
-        Chunk chunk = Instantiate(chunkPrefab, position, Quaternion.identity).GetComponent<Chunk>();
-        chunk.Initialize(this, chunkSize, position);
-        chunk.transform.parent = ParentChunk.transform;
-        chunks.Add(position, chunk);
+            Vector3Int position = new Vector3Int(x, y, z);
+
+            Chunk chunk = Instantiate(chunkPrefab, position, Quaternion.identity).GetComponent<Chunk>();
+            chunk.Initialize(this, chunkSize, position);
+            chunk.transform.parent = ParentChunk.transform;
+            chunks.Add(position, chunk);
         }
     }
-    
+
 }
 

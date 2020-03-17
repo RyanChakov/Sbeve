@@ -10,6 +10,8 @@ public class UIp : MonoBehaviour
     public GameObject cam;
     public GameObject esc;
     RaycastHit hit = new RaycastHit();
+    public AudioSource click;
+    public TerrainEditor terr;
     // Update is called once per frame
     void Start()
     {
@@ -18,7 +20,19 @@ public class UIp : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Shop.activeSelf || esc.activeSelf)
+        {
+            terr.enabled = false;
+            if(Input.GetMouseButton(0))
+            {
+                click.Play();
+            }
+        }
+        else if(!Shop.activeSelf && !esc.activeSelf && !terr.enabled)
+        {
+            terr.enabled = true;
+        }
+            if (Input.GetKeyDown(KeyCode.I))
         {
             Inventory.SetActive(!Inventory.activeSelf);
         }

@@ -18,7 +18,7 @@ public class moving : MonoBehaviour
     float timer = .15f;
     public FreeCam free;
     public ChangeCamera cC;
-
+    public AudioSource JetPackSound;
     public bool JetOn = false, shid = false;
     public GameObject[] Healthbars = new GameObject[10];
     public GameObject[] Shieldbars = new GameObject[10];
@@ -41,7 +41,6 @@ public class moving : MonoBehaviour
         // is the controller on the ground?
         if (controller.isGrounded)
         {
-
             //Feed moveDirection with input.
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             moveDirection = transform.TransformDirection(moveDirection);
@@ -81,11 +80,17 @@ public class moving : MonoBehaviour
         {
             if (Input.GetButton("Jump") && JetOn && fuelLevel > 0)
             {
+                if (!JetPackSound.isPlaying)
+                    JetPackSound.Play();
                 moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
                 moveDirection = transform.TransformDirection(moveDirection);
                 speed = speedF;
                 moveDirection.y = jumpSpeed;
                 Fuel(Time.deltaTime * 1.5f);
+            }
+            else
+            {
+                JetPackSound.Stop();
             }
         }
         //Applying gravity to the controller
@@ -192,5 +197,5 @@ public class moving : MonoBehaviour
         }
         tempFuelLevel = (int)fuelLevel;
     }
-   
+
 }

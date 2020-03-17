@@ -14,7 +14,9 @@ ScriptsOnlyBuild:
     - Show
     - Skeleton
     - SkeletonFix
+    - SoundSetter
     - TerrainEditor
+    - Trampoline
     - UIp
     - World
     - destory
@@ -39,10 +41,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -121,35 +121,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9546}
     - Class: 114
-      Script: {instanceID: 9574}
+      Script: {instanceID: 9576}
     - Class: 114
-      Script: {instanceID: 9912}
+      Script: {instanceID: 9914}
     - Class: 114
-      Script: {instanceID: 9934}
+      Script: {instanceID: 9936}
     - Class: 114
-      Script: {instanceID: 9946}
+      Script: {instanceID: 9948}
     - Class: 114
-      Script: {instanceID: 10054}
+      Script: {instanceID: 10056}
     - Class: 114
-      Script: {instanceID: 10158}
+      Script: {instanceID: 10160}
     - Class: 114
-      Script: {instanceID: 10188}
+      Script: {instanceID: 10192}
     - Class: 114
-      Script: {instanceID: 10382}
+      Script: {instanceID: 10386}
     - Class: 114
-      Script: {instanceID: 10398}
+      Script: {instanceID: 10402}
     - Class: 114
-      Script: {instanceID: 10490}
-    - Class: 114
-      Script: {instanceID: 10578}
+      Script: {instanceID: 10494}
     - Class: 114
       Script: {instanceID: 10582}
     - Class: 114
-      Script: {instanceID: 10738}
+      Script: {instanceID: 10586}
     - Class: 114
-      Script: {instanceID: 10890}
+      Script: {instanceID: 10742}
     - Class: 114
-      Script: {instanceID: 38930}
+      Script: {instanceID: 10894}
+    - Class: 114
+      Script: {instanceID: 11034}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -197,6 +197,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 90
@@ -232,55 +236,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9546}
     - Class: 114
-      Script: {instanceID: 9574}
+      Script: {instanceID: 9564}
     - Class: 114
-      Script: {instanceID: 9718}
+      Script: {instanceID: 9576}
     - Class: 114
-      Script: {instanceID: 9764}
+      Script: {instanceID: 9720}
     - Class: 114
-      Script: {instanceID: 9912}
+      Script: {instanceID: 9766}
     - Class: 114
-      Script: {instanceID: 9946}
+      Script: {instanceID: 9914}
     - Class: 114
-      Script: {instanceID: 9966}
+      Script: {instanceID: 9948}
     - Class: 114
-      Script: {instanceID: 10006}
+      Script: {instanceID: 9968}
     - Class: 114
-      Script: {instanceID: 10018}
+      Script: {instanceID: 10008}
     - Class: 114
-      Script: {instanceID: 10054}
+      Script: {instanceID: 10020}
     - Class: 114
-      Script: {instanceID: 10158}
+      Script: {instanceID: 10056}
     - Class: 114
-      Script: {instanceID: 10188}
+      Script: {instanceID: 10160}
     - Class: 114
-      Script: {instanceID: 10190}
+      Script: {instanceID: 10166}
     - Class: 114
-      Script: {instanceID: 10204}
+      Script: {instanceID: 10192}
     - Class: 114
-      Script: {instanceID: 10216}
+      Script: {instanceID: 10194}
     - Class: 114
-      Script: {instanceID: 10224}
+      Script: {instanceID: 10208}
     - Class: 114
-      Script: {instanceID: 10382}
+      Script: {instanceID: 10220}
     - Class: 114
-      Script: {instanceID: 10388}
+      Script: {instanceID: 10228}
     - Class: 114
-      Script: {instanceID: 10426}
+      Script: {instanceID: 10386}
     - Class: 114
-      Script: {instanceID: 10578}
+      Script: {instanceID: 10392}
+    - Class: 114
+      Script: {instanceID: 10430}
     - Class: 114
       Script: {instanceID: 10582}
     - Class: 114
-      Script: {instanceID: 10588}
+      Script: {instanceID: 10586}
     - Class: 114
-      Script: {instanceID: 10738}
+      Script: {instanceID: 10592}
     - Class: 114
-      Script: {instanceID: 10782}
+      Script: {instanceID: 10742}
     - Class: 114
-      Script: {instanceID: 10856}
+      Script: {instanceID: 10786}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 10860}
+    - Class: 114
+      Script: {instanceID: 11046}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -348,7 +356,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: be5e3eb005031438be67f9823c51c648
+      Hash: 62f95c9ae7900f3b72f6a8df0b82a79c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PickUp
@@ -576,6 +584,12 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: 67ec505b754f2ea5da94bd11434d5bdb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundSetter
+  - hash:
+      serializedVersion: 2
       Hash: 844a006113cc745926b47f598f0a67b5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -798,7 +812,7 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: cd5c008dd718fc4f8dcfbbf4d89da61c
+      Hash: 7eec5a474ead0b05e9ffa7f5c83feb3d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Show
@@ -954,6 +968,12 @@ ScriptsOnlyBuild:
     className: SimpleSmoothModifier
   - hash:
       serializedVersion: 2
+      Hash: 441a7be33602c8aa98b305aa20813298
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Trampoline
+  - hash:
+      serializedVersion: 2
       Hash: 43acdecfcc62de1110964c47067c846f
     assemblyName: AstarPathfindingProject.dll
     namespaceName: Pathfinding
@@ -984,13 +1004,13 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 8fd4ab24488946ad2283acd101cc0d3f
+      Hash: 5035055ab2d98531519680df2adf8326
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Skeleton
   - hash:
       serializedVersion: 2
-      Hash: 949577bd9db84573cc03bfb53b1c27c7
+      Hash: e0e44f725cea434c13b28ff990407550
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: moving
@@ -1032,7 +1052,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: fc10e9f94fa4095f878d795f879bab4d
+      Hash: cdfb4efc3d0ff4d2ccbd7d6389d62fb2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIp
@@ -1206,7 +1226,7 @@ ScriptsOnlyBuild:
     className: ProceduralWorld
   - hash:
       serializedVersion: 2
-      Hash: 5cb47fe2e25aac2290ce765dca672f09
+      Hash: 329f5fd4791e2234f34bad5aac067c55
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FreeCam
@@ -1260,6 +1280,12 @@ ScriptsOnlyBuild:
     className: Patrol
   - hash:
       serializedVersion: 2
+      Hash: 0d85f4fda1e0e70cd92c084d12f05cdc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RotateAround
+  - hash:
+      serializedVersion: 2
       Hash: 8649814970b42d345b89944b862453cc
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1282,14 +1308,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 0d85f4fda1e0e70cd92c084d12f05cdc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: RotateAround
   platform: 5
   scenePathNames:
   - Assets/Scenes/Iintro.unity
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/student/Documents/Unity Games/AllBuilds/Build1.9.7/Sbeve.exe
+  playerPath: E:/Users/Ryan/Desktop/GitUnity/All builds/Build1.9.9.2/Sbeve.exe

@@ -14,7 +14,7 @@ public class Skeleton : MonoBehaviour
     public float SHelath=10;
     public Animator Skel;
     public Animator Robot;
-  
+    public AudioSource attackSound;
     public Transform target;
     
  
@@ -62,6 +62,7 @@ public class Skeleton : MonoBehaviour
         if(timer<=0)
         {
             player.Health(1);
+            attackSound.Play();
            if(player.Phealth<=0)
             {
                 Skel.Play("SkeletonArmature|Skeleton_Idle");

@@ -7,6 +7,7 @@ public class Trampoline : MonoBehaviour
     public Transform end;
     public Transform start;
     public moving health;
+    public AudioSource Tele;
     void Start()
     {
 
@@ -24,13 +25,14 @@ public class Trampoline : MonoBehaviour
         {
 
             transform.position = new Vector3(end.position.x + 10, end.position.y + 10, end.position.z);
-
+            Tele.Play();
         }
 
         if (hit.collider.tag == "Teleporter")
         {
 
             transform.position = new Vector3(start.position.x + 10, start.position.y + 10, start.position.z);
+            Tele.Play();
 
         }
 

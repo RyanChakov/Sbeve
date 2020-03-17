@@ -9,6 +9,7 @@ public class Show : MonoBehaviour
     public GameObject Robot;
     public PickUp money;
     public moving health;
+    public AudioSource purchase, notenough;
     void Update()
     {
         money = Robot.GetComponentInChildren<PickUp>();
@@ -42,6 +43,11 @@ public class Show : MonoBehaviour
             money.Buy(cost);
             print("This is the health:" + healthAdd + " and this is the cost:" + cost);
             health.Health(-healthAdd);
+            Audio(purchase);
+        }
+        else
+        {
+            Audio(notenough);
         }
 
     }
@@ -56,6 +62,11 @@ public class Show : MonoBehaviour
             money.Buy(cost);
             print("This is the health:" + healthAdd + " and this is the cost:" + cost);
             health.Shield(healthAdd);
+            Audio(purchase);
+        }
+        else
+        {
+            Audio(notenough);
         }
 
     }
@@ -69,9 +80,18 @@ public class Show : MonoBehaviour
             money.Buy(cost);
             health.JetOn = true;
            JetPack.SetActive(true);
-            
-            
+
+
+            Audio(purchase);
+        }
+        else
+        {
+            Audio(notenough);
         }
 
+    }
+    public void Audio(AudioSource sound)
+    {
+        sound.Play();
     }
 }
