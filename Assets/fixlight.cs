@@ -18,9 +18,19 @@ public class fixlight : MonoBehaviour
     {
         if(player.transform.position.y<=110)
         {
-            print("tes DID IT WORK");
+           
+            RenderSettings.ambientIntensity = Mathf.Lerp(.2f, .5f, slows);
+            slows += .1f / 2 * Time.deltaTime;
+        }
+       else if (player.transform.position.y > 110)
+        {
+           
             RenderSettings.ambientIntensity = Mathf.Lerp(.5f, .2f, slows);
-            slows += 1 / 2 * Time.deltaTime;
+            slows += .1f / 2 * Time.deltaTime;
+        }
+        if (RenderSettings.ambientIntensity==.5f || RenderSettings.ambientIntensity == .2f)
+        {
+            slows = 0;
         }
     }
 }

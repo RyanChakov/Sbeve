@@ -7,28 +7,32 @@ public class CheckGround : MonoBehaviour
     const int DISAPEAR_DIST = 5;
     RaycastHit hit = new RaycastHit();
     RaycastHit hit1 = new RaycastHit();
-    float timer = 3f,time=0;
+    float timer = 3f, time = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector3 ned = new Vector3(transform.position.x, transform.position.y + DISAPEAR_DIST, transform.position.z);
-        Debug.DrawRay(ned, transform.TransformDirection(Vector3.down) * 2*DISAPEAR_DIST, Color.blue);
+        Debug.DrawRay(ned, transform.TransformDirection(Vector3.down) * 2 * DISAPEAR_DIST, Color.blue);
         if (time > timer)
         {
-            LayerMask mask = LayerMask.GetMask("Ground");
+            LayerMask mask = LayerMask.GetMask("Chunks");
+            LayerMask masked = LayerMask.GetMask("Ground");
 
-
-            if (!Physics.Raycast(ned, transform.TransformDirection(Vector3.down), out hit1, 2*DISAPEAR_DIST, mask))
+            if (Physics.Raycast(ned, transform.TransformDirection(Vector3.down), out hit1, 2 * DISAPEAR_DIST, masked))
             {
                 Destroy(gameObject);
             }
-           
+            else if (!Physics.Raycast(ned, transform.TransformDirection(Vector3.down), out hit1, 2 * DISAPEAR_DIST, mask))
+            {
+                Destroy(gameObject);
+            }
+
         }
         else
         {

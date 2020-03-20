@@ -43,7 +43,7 @@ public class Chunk : MonoBehaviour
         _densityGenerator = world.densityGenerator;
         
         int worldPosX = position.x;
-        int worldPosY = position.y-100;
+        int worldPosY = position.y-300;
         int worldPosZ = position.z;
 
         points = new Point[chunkSize + 1, chunkSize + 1, chunkSize + 1];
