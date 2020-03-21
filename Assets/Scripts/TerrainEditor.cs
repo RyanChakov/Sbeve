@@ -62,7 +62,7 @@ public class TerrainEditor : MonoBehaviour
                     }
                 }
             }
-
+            
             EditTerrain(hitPoint, addTerrain, force, range);
             // point, false, 2,2
         }

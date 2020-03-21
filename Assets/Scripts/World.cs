@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class World : MonoBehaviour
 {
+    float timed = 0f;
     public int chunkSize = 8;
     public GameObject ParentChunk;
     public int worldWidth = 5;
@@ -181,18 +182,48 @@ public class World : MonoBehaviour
         else
         {
 
-           
+            float newR = 0, amountChangeR = 0;
+            float newG = 0, amountChangeG = 0;
+            float newB = 0, amountChangeB = 0;
+            float temp = 0;
             Vector3Int position = new Vector3Int(x, y, z);
 
             Chunk chunk = Instantiate(chunkPrefab, position, Quaternion.identity).GetComponent<Chunk>();
             chunk.Initialize(this, chunkSize, position);
             chunk.transform.parent = ParentChunk.transform;
+            var chunkRender = chunk.GetComponent<MeshRenderer>();
+            /*
+             if(y<=200 && y>100)
+             {
+                 if(y==200)
+                     timed = 0;
+                 chunkRender.material.SetColor("_Color", Color.red);
+             }
+             else if (y<=100)
+             {
+                 if (y == 100)
+                     timed = 0;
+                 chunkRender.material.SetColor("_Color",  Color.blue);
+             }
+              */
+           
+            newR = chunkRender.material.color.r;
+            newG = chunkRender.material.color.g;
+            newB = chunkRender.material.color.b;
+          //.2169 .1304 .0583
+            amountChangeR = newR / 15;
+            amountChangeG = newG / 15;
+            amountChangeB = newB / 15;
+            temp = (300 - y) / 20;
+            chunkRender.material.SetColor("_Color", new Color((newR - (temp * amountChangeR))+ .2169f, (newG - (temp * amountChangeG))+.1304f, (newB - (temp * amountChangeB))+.0583f));
+
             chunks.Add(position, chunk);
+
             /*if (y == 100)
-            {
-                chunk.gameObject.layer = 11;
-            }
-            */
+        {
+            chunk.gameObject.layer = 11;
+        }
+        */
         }
     }
 

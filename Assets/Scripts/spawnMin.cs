@@ -10,15 +10,15 @@ public class spawnMin : MonoBehaviour
     void Start()
     {
       
-            int xx = Random.Range(38, 260);
-            int yy = Random.Range(0, 100);
-            int zz = Random.Range(30, 260);
+            int xx = Random.Range(38, 250);
+            int yy = Random.Range(0, 200);
+            int zz = Random.Range(30, 250);
             temp = Instantiate(dungeon, new Vector3(xx, yy, zz), Quaternion.identity);
         temp.transform.parent = ParentSurf.transform;
         for (int q = 0; q < 5; q++)
         {
             int x = Random.Range(0, 220);
-            int y = Random.Range(0, 95);
+            int y = Random.Range(0, 255);
             int z = Random.Range(0, 220);
             temp = Instantiate(caves, new Vector3(x, y, z), Quaternion.identity);
            
@@ -27,47 +27,47 @@ public class spawnMin : MonoBehaviour
         }
         for (int q = 0; q < 5; q++)
         {
-            int x = Random.Range(0, 260);
-            int z = Random.Range(0, 260);
-           temp = Instantiate(building1, new Vector3(x, 114, z), Quaternion.identity);
+            int x = Random.Range(0, 250);
+            int z = Random.Range(0, 250);
+           temp = Instantiate(building1, new Vector3(x, 314, z), Quaternion.identity);
             temp.transform.parent = ParentSurf.transform;
         }
         for (int q = 0; q < 10; q++)
         {
-            int x = Random.Range(0, 260);
+            int x = Random.Range(0, 250);
           
-            int z = Random.Range(0, 260);
-           temp =  Instantiate(building2, new Vector3(x, 116, z), Quaternion.identity);
+            int z = Random.Range(0, 250);
+           temp =  Instantiate(building2, new Vector3(x, 316, z), Quaternion.identity);
             temp.transform.parent = ParentSurf.transform;
         }
         for (int q = 0; q < 10; q++)
         {
-            int x = Random.Range(0, 260);
+            int x = Random.Range(0, 250);
            
-            int z = Random.Range(0, 260);
-            temp = Instantiate(building3, new Vector3(x, 114, z), Quaternion.identity);
+            int z = Random.Range(0, 250);
+            temp = Instantiate(building3, new Vector3(x, 314, z), Quaternion.identity);
             temp.transform.parent = ParentSurf.transform;
         }
         for (int q=0; q<50; q++)
         {
             int x= Random.Range(0, 260);
-            int y = Random.Range(0, 50);
+            int y = Random.Range(50, 100);
             int z = Random.Range(0, 260);
             temp = Instantiate(gold, new Vector3(x, y, z), Quaternion.identity);
             temp.transform.parent = ParentOre.transform;
         }
-        for (int q = 0; q < 100; q++)
+        for (int q = 0; q < 200; q++)
         {
             int x = Random.Range(0, 260);
-            int y = Random.Range(0, 75);
+            int y = Random.Range(0, 275);
             int z = Random.Range(0, 260);
            temp =  Instantiate(amber, new Vector3(x, y, z), Quaternion.identity);
             temp.transform.parent = ParentOre.transform;
         }
-        for (int q = 0; q < 100; q++)
+        for (int q = 0; q < 150; q++)
         {
             int x = Random.Range(0, 260);
-            int y = Random.Range(0, 75);
+            int y = Random.Range(0, 275);
             int z = Random.Range(0, 260);
            temp =  Instantiate(amethyst, new Vector3(x, y, z), Quaternion.identity);
             temp.transform.parent = ParentOre.transform;
@@ -75,15 +75,15 @@ public class spawnMin : MonoBehaviour
         for (int q = 0; q < 100; q++)
         {
             int x = Random.Range(0, 260);
-            int y = Random.Range(0, 75);
+            int y = Random.Range(0, 275);
             int z = Random.Range(0, 260);
            temp = Instantiate(aquamarine, new Vector3(x, y, z), Quaternion.identity);
             temp.transform.parent = ParentOre.transform;
         }
-        for (int q = 0; q < 100; q++)
+        for (int q = 0; q < 200; q++)
         {
             int x = Random.Range(0, 260);
-            int y = Random.Range(0, 75);
+            int y = Random.Range(0, 280);
             int z = Random.Range(0, 260);
             temp = Instantiate(copper, new Vector3(x, y, z), Quaternion.identity);
             temp.transform.parent = ParentOre.transform;
@@ -91,23 +91,23 @@ public class spawnMin : MonoBehaviour
         for (int q = 0; q < 100; q++)
         {
             int x = Random.Range(0, 260);
-            int y = Random.Range(0, 75);
+            int y = Random.Range(0, 200);
             int z = Random.Range(0, 260);
            temp =  Instantiate(emerald, new Vector3(x, y, z), Quaternion.identity);
             temp.transform.parent = ParentOre.transform;
         }
-        for (int q = 0; q < 100; q++)
+        for (int q = 0; q < 150; q++)
         {
             int x = Random.Range(0, 260);
-            int y = Random.Range(0, 75);
+            int y = Random.Range(0, 275);
             int z = Random.Range(0, 260);
           temp =  Instantiate(garnet, new Vector3(x, y, z), Quaternion.identity);
             temp.transform.parent = ParentOre.transform;
         }
-        for (int q = 0; q < 100; q++)
+        for (int q = 0; q < 200; q++)
         {
             int x = Random.Range(0, 260);
-            int y = Random.Range(0, 75);
+            int y = Random.Range(0, 275);
             int z = Random.Range(0, 260);
             temp  = Instantiate(lapis, new Vector3(x, y, z), Quaternion.identity);
             temp.transform.parent = ParentOre.transform;
@@ -115,39 +115,39 @@ public class spawnMin : MonoBehaviour
         for (int q = 0; q < 100; q++)
         {
             int x = Random.Range(0, 260);
-            int y = Random.Range(0, 75);
+            int y = Random.Range(0, 150);
             int z = Random.Range(0, 260);
             temp = Instantiate(obsidian, new Vector3(x, y, z), Quaternion.identity);
-            temp.transform.parent = ParentOre.transform;
-        }
-        for (int q = 0; q < 100; q++)
-        {
-            int x = Random.Range(0, 260);
-            int y = Random.Range(0, 75);
-            int z = Random.Range(0, 260);
-            temp  = Instantiate(pearl, new Vector3(x, y, z), Quaternion.identity);
-            temp.transform.parent = ParentOre.transform;
-        }
-        for (int q = 0; q < 100; q++)
-        {
-            int x = Random.Range(0, 260);
-            int y = Random.Range(0, 75);
-            int z = Random.Range(0, 260);
-           temp =  Instantiate(ruby, new Vector3(x, y, z), Quaternion.identity);
-            temp.transform.parent = ParentOre.transform;
-        }
-        for (int q = 0; q < 100; q++)
-        {
-            int x = Random.Range(0, 260);
-            int y = Random.Range(0, 75);
-            int z = Random.Range(0, 260);
-           temp =  Instantiate(smoky, new Vector3(x, y, z), Quaternion.identity);
             temp.transform.parent = ParentOre.transform;
         }
         for (int q = 0; q < 150; q++)
         {
             int x = Random.Range(0, 260);
-            int y = Random.Range(0, 100);
+            int y = Random.Range(100, 275);
+            int z = Random.Range(0, 260);
+            temp  = Instantiate(pearl, new Vector3(x, y, z), Quaternion.identity);
+            temp.transform.parent = ParentOre.transform;
+        }
+        for (int q = 0; q < 150; q++)
+        {
+            int x = Random.Range(0, 260);
+            int y = Random.Range(100, 275);
+            int z = Random.Range(0, 260);
+           temp =  Instantiate(ruby, new Vector3(x, y, z), Quaternion.identity);
+            temp.transform.parent = ParentOre.transform;
+        }
+        for (int q = 0; q < 150; q++)
+        {
+            int x = Random.Range(0, 260);
+            int y = Random.Range(150, 275);
+            int z = Random.Range(0, 260);
+           temp =  Instantiate(smoky, new Vector3(x, y, z), Quaternion.identity);
+            temp.transform.parent = ParentOre.transform;
+        }
+        for (int q = 0; q < 200; q++)
+        {
+            int x = Random.Range(0, 260);
+            int y = Random.Range(0, 300);
             int z = Random.Range(0, 260);
             temp = Instantiate(coal, new Vector3(x, y, z), Quaternion.identity);
             temp.transform.parent = ParentOre.transform;
