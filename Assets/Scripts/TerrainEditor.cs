@@ -62,7 +62,14 @@ public class TerrainEditor : MonoBehaviour
                     }
                 }
             }
-            
+            if(hit.collider.transform.position.y == 200)
+            {
+                force = 0.0000001f;
+            }
+            else
+            {
+                force = 0.5f;
+            }
             EditTerrain(hitPoint, addTerrain, force, range);
             // point, false, 2,2
         }
