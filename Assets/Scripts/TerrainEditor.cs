@@ -5,9 +5,10 @@ public class TerrainEditor : MonoBehaviour
     [SerializeField] private bool addTerrain = true;
     [SerializeField] private float force = 2f;
     [SerializeField] private float range = 2f;
-
+    public Show show;
     [SerializeField] private float maxReachDistance = 100f;
-
+    public float standardForce=.25f;
+    public int standardDepth = 200;
     [SerializeField] private AnimationCurve forceOverDistance = AnimationCurve.Constant(0, 1, 1);
 
     [SerializeField] private World world;
@@ -62,13 +63,37 @@ public class TerrainEditor : MonoBehaviour
                     }
                 }
             }
-            if(hit.collider.transform.position.y == 200)
+            if(show.pic3)
+            {
+                standardForce = 1f;
+                standardDepth = -20;
+                range = 5f;
+            }
+            else if (show.pic2)
+            {
+                standardForce = .75f;
+                standardDepth = 40;
+                range = 4.5f;
+            }
+            else if(show.pic1)
+            {
+                standardForce = .5f;
+                standardDepth = 140;
+                range = 4.25f;
+            }
+            else
+            {
+                standardDepth = 240;
+                standardForce = .25f;
+            }
+
+            if(hit.collider.transform.position.y == standardDepth)
             {
                 force = 0.0000001f;
             }
             else
             {
-                force = 0.5f;
+                force = standardForce;
             }
             EditTerrain(hitPoint, addTerrain, force, range);
             // point, false, 2,2

@@ -168,7 +168,7 @@ public class World : MonoBehaviour
     {
         if (starter)
         {
-            if (y == 100)
+            if (y == 300)
             {
                 Vector3Int position = new Vector3Int(x, y, z);
 
@@ -176,6 +176,8 @@ public class World : MonoBehaviour
                 chunk.Initialize(this, chunkSize, position);
                 chunk.transform.parent = ParentChunk.transform;
                 chunks.Add(position, chunk);
+
+
             }
 
         }
@@ -206,16 +208,16 @@ public class World : MonoBehaviour
                  chunkRender.material.SetColor("_Color",  Color.blue);
              }
               */
-           
+
             newR = chunkRender.material.color.r;
             newG = chunkRender.material.color.g;
             newB = chunkRender.material.color.b;
-          //.2169 .1304 .0583
+            //.2169 .1304 .0583
             amountChangeR = newR / 15;
             amountChangeG = newG / 15;
             amountChangeB = newB / 15;
             temp = (300 - y) / 20;
-            chunkRender.material.SetColor("_Color", new Color((newR - (temp * amountChangeR))+ .2169f, (newG - (temp * amountChangeG))+.1304f, (newB - (temp * amountChangeB))+.0583f));
+            chunkRender.material.SetColor("_Color", new Color((newR - (temp * amountChangeR)) + .2169f, (newG - (temp * amountChangeG)) + .1304f, (newB - (temp * amountChangeB)) + .0583f));
 
             chunks.Add(position, chunk);
 

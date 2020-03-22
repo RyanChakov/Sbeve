@@ -11,6 +11,7 @@ public class UIp : MonoBehaviour
     public GameObject cam;
     public GameObject esc;
     RaycastHit hit = new RaycastHit();
+    RaycastHit hitT = new RaycastHit();
     public AudioSource click;
     public TerrainEditor terr;
     // Update is called once per frame
@@ -45,7 +46,7 @@ public class UIp : MonoBehaviour
 
                 if (hit.collider.name == "Knight")
                 {
-                    EText.SetActive(false);
+                    //EText.SetActive(false);
                     Shop.SetActive(!Shop.activeSelf);
                 }
                 if (Shop.activeSelf)
@@ -83,13 +84,21 @@ public class UIp : MonoBehaviour
                 esc.SetActive(true);
             }
         }
-        if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, 10f))
+
+        if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hitT, 10f))
         {
-            if (hit.collider.name == "Knight")
+            if (hitT.collider.name == "Knight" || hitT.collider.gameObject.layer == 9)
             {
                 EText.SetActive(true);
             }
-
+            else
+            {
+                EText.SetActive(false);
+            }
+        }
+        else
+        {
+            EText.SetActive(false);
         }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Show : MonoBehaviour
 {
+    public bool pic1 = false, pic2 = false, pic3 = false;
     public FreeCam FC;
     public GameObject JetPack;
     public GameObject Robot;
@@ -18,7 +19,7 @@ public class Show : MonoBehaviour
     public void ShowIt(GameObject anything)
     {
         anything.SetActive(true);
-        
+
     }
     public void UnShowIt(GameObject anything)
     {
@@ -35,8 +36,8 @@ public class Show : MonoBehaviour
     public void Heal2(float healthAddCost)
     {
         //super weird bug cant pass multiples things through to the first number is heal added the next 3 numbers are the cost
-        
-        float cost = healthAddCost%1000;
+
+        float cost = healthAddCost % 1000;
         float healthAdd = (healthAddCost - cost) / 1000;
         if (cost <= money.money)
         {
@@ -72,14 +73,14 @@ public class Show : MonoBehaviour
     }
     public void JetPackOn(float cost)
     {
-       
 
-        
+
+
         if (cost <= money.money)
         {
             money.Buy(cost);
             health.JetOn = true;
-           JetPack.SetActive(true);
+            JetPack.SetActive(true);
 
 
             Audio(purchase);
@@ -93,5 +94,34 @@ public class Show : MonoBehaviour
     public void Audio(AudioSource sound)
     {
         sound.Play();
+    }
+    public void Picaxe(float picAddCost)
+    {
+       
+        float cost = picAddCost % 1000;
+        float amount = (picAddCost - cost) / 1000;
+        if (cost <= money.money)
+        {
+            switch (amount)
+            {
+                case 1:
+                    pic1 = true;
+                    break;
+                case 2:
+                    pic2 = true;
+                    break;
+                case 3:
+                    pic3 = true;
+                    break;
+            }
+
+            money.Buy(cost);
+            Audio(purchase);
+        }
+        else
+        {
+            Audio(notenough);
+        }
+
     }
 }

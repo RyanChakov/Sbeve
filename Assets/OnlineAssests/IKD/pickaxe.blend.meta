@@ -3,7 +3,17 @@ guid: f08c9105ce2cc4841a75e1ad9c1f316e
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: maner_pickaxe
+    second: {fileID: 2100000, guid: 2b3d0fa9c80538b48b0508aeb73354ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pickaxe
+    second: {fileID: 2100000, guid: 415b13acf9262814c8680546606237ca, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
