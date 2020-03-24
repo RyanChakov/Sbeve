@@ -12,6 +12,7 @@ public class SoundSetter : MonoBehaviour
     {
         moving = GetComponent<moving>();
         player = GetComponent<CharacterController>();
+
         driller = GetComponentInChildren<TerrainEditor>();
     }
     // Update is called once per frame
@@ -26,18 +27,24 @@ public class SoundSetter : MonoBehaviour
         }
         if (!drill.isPlaying)
         {
-            if (Input.GetButton("Fire1") && driller.enabled)
+            if (Input.GetButton("Fire1") && driller.enabled && driller.eye1.activeSelf)
             { 
                 drill.Play();
             }
+            else if(!driller.eye1.activeSelf)
+            {
+                drill.Stop();
+            }
         }
-        else if (drill.isPlaying && !Input.GetButton("Fire1"))
+        else if (drill.isPlaying && !Input.GetButton("Fire1") || !driller.eye1.activeSelf)
         {
             drill.Stop();
+           
         }
         else if(!driller.enabled)
         {
             drill.Stop();
+           
         }
     }
 }

@@ -7,10 +7,12 @@ ScriptsOnlyBuild:
     - Chunk
     - Cycle
     - DestoryDestroy
+    - Driller
     - FreeCam
     - PickUp
     - Quit
     - RotateAround
+    - Show
     - Skeleton
     - SkeletonFix
     - SoundSetter
@@ -144,21 +146,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10198}
     - Class: 114
-      Script: {instanceID: 10392}
+      Script: {instanceID: 10394}
     - Class: 114
-      Script: {instanceID: 10408}
+      Script: {instanceID: 10410}
     - Class: 114
-      Script: {instanceID: 10500}
+      Script: {instanceID: 10502}
     - Class: 114
-      Script: {instanceID: 10588}
+      Script: {instanceID: 10590}
     - Class: 114
-      Script: {instanceID: 10592}
+      Script: {instanceID: 10594}
     - Class: 114
-      Script: {instanceID: 10748}
+      Script: {instanceID: 10750}
     - Class: 114
-      Script: {instanceID: 10900}
+      Script: {instanceID: 10902}
     - Class: 114
-      Script: {instanceID: 11040}
+      Script: {instanceID: 11042}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -265,6 +267,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9722}
     - Class: 114
+      Script: {instanceID: 9768}
+    - Class: 114
       Script: {instanceID: 9916}
     - Class: 114
       Script: {instanceID: 9950}
@@ -295,25 +299,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10234}
     - Class: 114
-      Script: {instanceID: 10392}
+      Script: {instanceID: 10250}
     - Class: 114
-      Script: {instanceID: 10398}
+      Script: {instanceID: 10394}
     - Class: 114
-      Script: {instanceID: 10436}
+      Script: {instanceID: 10400}
     - Class: 114
-      Script: {instanceID: 10588}
+      Script: {instanceID: 10438}
     - Class: 114
-      Script: {instanceID: 10592}
+      Script: {instanceID: 10590}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10594}
     - Class: 114
-      Script: {instanceID: 10748}
+      Script: {instanceID: 10600}
     - Class: 114
-      Script: {instanceID: 10792}
+      Script: {instanceID: 10750}
     - Class: 114
-      Script: {instanceID: 10866}
+      Script: {instanceID: 10794}
     - Class: 114
-      Script: {instanceID: 11052}
+      Script: {instanceID: 10868}
+    - Class: 114
+      Script: {instanceID: 11054}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -843,7 +849,7 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: 7eec5a474ead0b05e9ffa7f5c83feb3d
+      Hash: aa447256655800e2d3b87662fa993842
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Show
@@ -927,7 +933,7 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
-      Hash: 9e4c5170e1e4250094d748726eb60611
+      Hash: 4074450db4cf33ffd4f828f5e7e8d497
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TerrainEditor
@@ -1057,6 +1063,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: moving
+  - hash:
+      serializedVersion: 2
+      Hash: dd1c990cff5063d6c17ef47bcc69817d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Driller
   - hash:
       serializedVersion: 2
       Hash: f1b001dcf0f786a375c9ef019a1abfd4

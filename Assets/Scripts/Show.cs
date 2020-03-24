@@ -39,7 +39,7 @@ public class Show : MonoBehaviour
 
         float cost = healthAddCost % 1000;
         float healthAdd = (healthAddCost - cost) / 1000;
-        if (cost <= money.money)
+        if (cost <= money.totalmoney)
         {
             money.Buy(cost);
             print("This is the health:" + healthAdd + " and this is the cost:" + cost);
@@ -58,7 +58,7 @@ public class Show : MonoBehaviour
 
         float cost = healthAddCost % 1000;
         float healthAdd = (healthAddCost - cost) / 1000;
-        if (cost <= money.money)
+        if (cost <= money.totalmoney)
         {
             money.Buy(cost);
             print("This is the health:" + healthAdd + " and this is the cost:" + cost);
@@ -76,7 +76,7 @@ public class Show : MonoBehaviour
 
 
 
-        if (cost <= money.money)
+        if (cost <= money.totalmoney)
         {
             money.Buy(cost);
             health.JetOn = true;
@@ -100,7 +100,7 @@ public class Show : MonoBehaviour
        
         float cost = picAddCost % 1000;
         float amount = (picAddCost - cost) / 1000;
-        if (cost <= money.money)
+        if (cost <= money.totalmoney)
         {
             switch (amount)
             {
