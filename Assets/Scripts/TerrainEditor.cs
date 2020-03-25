@@ -6,7 +6,7 @@ public class TerrainEditor : MonoBehaviour
     [SerializeField] private float force = 2f;
     [SerializeField] private float range = 2f;
     public Show show;
-    public GameObject eye1,eye2;
+   
     [SerializeField] private float maxReachDistance = 100f;
     public float standardForce = .25f;
     public int standardDepth = 200;
@@ -14,7 +14,7 @@ public class TerrainEditor : MonoBehaviour
 
     [SerializeField] private World world;
     [SerializeField] private Transform playerCamera;
-    public VolumetricLineBehavior VBL,VBL2;
+ 
     Chunk[] _initChunks;
 
     public LineRenderer line;
@@ -29,12 +29,7 @@ public class TerrainEditor : MonoBehaviour
 
     private void Update()
     {
-        eye1.SetActive(false);
-        eye2.SetActive(false);
-        VBL.StartPos = Vector3.zero;
-        VBL.EndPos = Vector3.zero;
-        VBL2.StartPos = Vector3.zero;
-        VBL2.EndPos = Vector3.zero;
+       
         TryEditTerrain();
     }
 
@@ -63,17 +58,9 @@ public class TerrainEditor : MonoBehaviour
         {
             
             Vector3 hitPoint = hit.point;
-            eye1.SetActive(true);
-            eye1.transform.LookAt(new Vector3(hitPoint.x, hitPoint.y, hitPoint.z));
-            VBL.StartPos = eye1.transform.position;
-            VBL.EndPos = new Vector3(hitPoint.x, hitPoint.y, hitPoint.z );
-
-            eye2.SetActive(true);
-            eye2.transform.LookAt(new Vector3(hitPoint.x, hitPoint.y, hitPoint.z));
-            VBL2.StartPos = eye2.transform.position;
-            VBL2.EndPos = new Vector3(hitPoint.x, hitPoint.y, hitPoint.z );
+           
             // VBL.EndPos = new Vector3(hitPoint.x + (Random.Range(-4, 4)), hitPoint.y + (Random.Range(-4, 4)), hitPoint.z);
-            // Debug.DrawRay(startP, playerCamera.forward, Color.magenta);
+           
             if (addTerrain)
             {
                 Collider[] hits = Physics.OverlapSphere(hitPoint, range / 2f * 0.8f);

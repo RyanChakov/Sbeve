@@ -8,11 +8,14 @@ public class SoundSetter : MonoBehaviour
     private moving moving;
     private CharacterController player;
     private TerrainEditor driller;
+    private Animator RobotAnim;
+    public GameObject Cam;
+    bool first = true;
     void Start()
     {
         moving = GetComponent<moving>();
         player = GetComponent<CharacterController>();
-
+        RobotAnim = GetComponent<Animator>();
         driller = GetComponentInChildren<TerrainEditor>();
     }
     // Update is called once per frame
@@ -27,24 +30,23 @@ public class SoundSetter : MonoBehaviour
         }
         if (!drill.isPlaying)
         {
-            if (Input.GetButton("Fire1") && driller.enabled && driller.eye1.activeSelf)
-            { 
-                drill.Play();
-            }
-            else if(!driller.eye1.activeSelf)
+            if (Input.GetButton("Fire1") && driller.enabled)
             {
-                drill.Stop();
+                drill.Play();
+                if (first)
+                {
+                    RobotAnim.SetBool("Mining", true);
+                    RobotAnim.Play("DrillingAnim");
+                    first = false;
+                }
             }
         }
-        else if (drill.isPlaying && !Input.GetButton("Fire1") || !driller.eye1.activeSelf)
+        else if (drill.isPlaying && !Input.GetButton("Fire1")|| !driller.enabled)
         {
+            RobotAnim.SetBool("Mining", false);
+            first = true;
             drill.Stop();
-           
-        }
-        else if(!driller.enabled)
-        {
-            drill.Stop();
-           
+
         }
     }
 }

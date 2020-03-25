@@ -4,7 +4,20 @@ using UnityEngine;
 
 public class PRessIns : MonoBehaviour
 {
-   public void PressPol()
+   
+    void Start()
+    {
+
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+
+        }
+            
+    }
+    public void PressPol()
     {
         print("TESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
     }
