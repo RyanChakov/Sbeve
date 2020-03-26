@@ -14,6 +14,7 @@ public class UIp : MonoBehaviour
     RaycastHit hitT = new RaycastHit();
     public AudioSource click;
     public TerrainEditor terr;
+    public bool picPickUp=false,jetPickUp=false;
     // Update is called once per frame
     void Start()
     {
@@ -48,6 +49,17 @@ public class UIp : MonoBehaviour
                 {
                     //EText.SetActive(false);
                     Shop.SetActive(!Shop.activeSelf);
+                }
+                else if(hit.collider.transform.parent.name == "picaxe")
+                {
+                    hit.collider.transform.parent.gameObject.SetActive(false);
+                    picPickUp = true;
+
+                }
+                else if (hit.collider.transform.parent.name == "JetpackPick")
+                {
+                    hit.collider.transform.parent.gameObject.SetActive(false);
+                    jetPickUp = true;
                 }
                 if (Shop.activeSelf)
                 {
@@ -87,7 +99,7 @@ public class UIp : MonoBehaviour
 
         if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hitT, 10f))
         {
-            if (hitT.collider.name == "Knight" || hitT.collider.gameObject.layer == 9)
+            if (hitT.collider.gameObject.layer == 16 || hitT.collider.gameObject.layer == 9 || hitT.collider.name == "Slime")
             {
                 EText.SetActive(true);
             }

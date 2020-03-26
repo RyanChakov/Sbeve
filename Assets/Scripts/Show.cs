@@ -11,10 +11,23 @@ public class Show : MonoBehaviour
     public PickUp money;
     public moving health;
     public AudioSource purchase, notenough;
+    public UIp ui;
+    public GameObject jet, PicAxe1, PicAxe2, PicAxe3;
     void Update()
     {
         money = Robot.GetComponentInChildren<PickUp>();
         health = Robot.GetComponentInChildren<moving>();
+        if(ui.picPickUp)
+        {
+            PicAxe1.SetActive(true);
+            PicAxe2.SetActive(true);
+            PicAxe3.SetActive(true);
+        }
+        if(ui.jetPickUp)
+        {
+            jet.SetActive(true);
+        }
+
     }
     public void ShowIt(GameObject anything)
     {

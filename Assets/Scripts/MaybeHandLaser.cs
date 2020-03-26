@@ -57,9 +57,7 @@ public class MaybeHandLaser : MonoBehaviour
         Ray ray = new Ray(Cam.transform.position, direction);
         Debug.DrawRay(Cam.transform.position, direction);
         if (Physics.Raycast(ray, out RaycastHit hit, 100f))
-        {
-            print("did you hit it ");
-            
+        {   
             hitpoint = hit.point;
         }
 

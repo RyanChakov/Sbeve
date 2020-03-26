@@ -11,7 +11,7 @@ public class spawnMin : MonoBehaviour
     {
       
             int xx = Random.Range(38, 250);
-            int yy = Random.Range(0, 200);
+            int yy = Random.Range(120, 220);
             int zz = Random.Range(30, 250);
             temp = Instantiate(dungeon, new Vector3(xx, yy, zz), Quaternion.identity);
         temp.transform.parent = ParentSurf.transform;
