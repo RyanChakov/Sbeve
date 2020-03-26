@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class spawnMin : MonoBehaviour
 {
-    public GameObject amber,amethyst,aquamarine,coal,copper,emerald,garnet,gold,lapis,obsidian,pearl,ruby,smoky,building1,building2,building3,dungeon,ParentSurf,ParentOre,caves;
+    public GameObject amber,amethyst,aquamarine,coal,copper,emerald,garnet,gold,lapis,obsidian,pearl,ruby,smoky,building1,building2,building3,dungeon,ParentSurf,ParentOre,caves,ParentCaves;
     GameObject temp;
     // Start is called before the first frame update
     void Start()
@@ -15,15 +15,15 @@ public class spawnMin : MonoBehaviour
             int zz = Random.Range(30, 250);
             temp = Instantiate(dungeon, new Vector3(xx, yy, zz), Quaternion.identity);
         temp.transform.parent = ParentSurf.transform;
-        for (int q = 0; q < 5; q++)
+        for (int q = 0; q < 15; q++)
         {
-            int x = Random.Range(0, 220);
-            int y = Random.Range(0, 255);
-            int z = Random.Range(0, 220);
+            int x = Random.Range(25, 200);
+            int y = Random.Range(25, 255);
+            int z = Random.Range(25, 200);
             temp = Instantiate(caves, new Vector3(x, y, z), Quaternion.identity);
            
            
-            temp.transform.parent = ParentSurf.transform;
+            temp.transform.parent = ParentCaves.transform;
         }
         for (int q = 0; q < 5; q++)
         {

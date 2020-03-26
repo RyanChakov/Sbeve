@@ -97,7 +97,7 @@ public class TerrainEditor : MonoBehaviour
                 standardForce = .25f;
             }
 
-            if (hit.collider.transform.position.y == standardDepth)
+            if (hit.collider.transform.position.y <= standardDepth)
             {
                 force = 0.0000001f;
             }
