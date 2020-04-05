@@ -27,6 +27,6 @@ public class Volume : MonoBehaviour
         ambient.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
         background.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
         game.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
-        ambient.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
+        menu.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
     }
 }

@@ -4,7 +4,6 @@ using System.Collections;
 public class moving : MonoBehaviour
 {
     //Variables
-    public RectTransform hBar;
     float bLength = .4f;
     public float speedF = 6.0F;
     public int Phealth = 10;

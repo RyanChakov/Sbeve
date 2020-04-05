@@ -758,6 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5aecd8c203c594b9e0724db97b31aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  head: {fileID: 0}
   Bit: {fileID: 628152805}
   main: {fileID: 1903098310}
   BIG: {fileID: 606381599}
@@ -3320,11 +3321,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShopUI
       objectReference: {fileID: 0}
-    - target: {fileID: 3441390842358768908, guid: afcde274e17180f428cb6ed6b9955f9e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3441390842358768896, guid: afcde274e17180f428cb6ed6b9955f9e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3432,33 +3428,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3441390841096653286, guid: afcde274e17180f428cb6ed6b9955f9e,
         type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441390841096653286, guid: afcde274e17180f428cb6ed6b9955f9e,
+        type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3441390841096653286, guid: afcde274e17180f428cb6ed6b9955f9e,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441390841096653286, guid: afcde274e17180f428cb6ed6b9955f9e,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.61853987
-      objectReference: {fileID: 0}
-    - target: {fileID: 5241926928283859645, guid: afcde274e17180f428cb6ed6b9955f9e,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 81.075294
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441390841909648869, guid: afcde274e17180f428cb6ed6b9955f9e,
-        type: 3}
-      propertyPath: m_Value
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3441390841909648869, guid: afcde274e17180f428cb6ed6b9955f9e,
-        type: 3}
-      propertyPath: m_Size
-      value: 0.38146013
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afcde274e17180f428cb6ed6b9955f9e, type: 3}
@@ -4290,6 +4271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5aecd8c203c594b9e0724db97b31aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  head: {fileID: 0}
   Bit: {fileID: 7482709058525291978}
   main: {fileID: 4525351105495331728}
   BIG: {fileID: 8495284466831336862}

@@ -44,7 +44,6 @@ public class UIp : MonoBehaviour
 
             if (Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, 10f))
             {
-
                 if (hit.collider.name == "Knight")
                 {
                     //EText.SetActive(false);
@@ -54,7 +53,6 @@ public class UIp : MonoBehaviour
                 {
                     hit.collider.transform.parent.gameObject.SetActive(false);
                     picPickUp = true;
-
                 }
                 else if (hit.collider.transform.parent.name == "JetpackPick")
                 {

@@ -12,7 +12,7 @@ public class Show : MonoBehaviour
     public moving health;
     public AudioSource purchase, notenough;
     public UIp ui;
-    public GameObject jet, PicAxe1, PicAxe2, PicAxe3;
+    public GameObject jet, PicAxe1, PicAxe2, PicAxe3, LaserHand,HandR;
     void Update()
     {
         money = Robot.GetComponentInChildren<PickUp>();
@@ -137,4 +137,20 @@ public class Show : MonoBehaviour
         }
 
     }
+    public void Laser(float cost)
+    {
+        if (cost <= money.totalmoney)
+        {
+            money.Buy(cost);
+            LaserHand.SetActive(true);
+            HandR.SetActive(false);
+            Audio(purchase);
+        }
+        else
+        {
+            Audio(notenough);
+        }
+
+    }
+
 }

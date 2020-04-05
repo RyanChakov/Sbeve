@@ -57,8 +57,15 @@ public class MaybeHandLaser : MonoBehaviour
         Ray ray = new Ray(Cam.transform.position, direction);
         Debug.DrawRay(Cam.transform.position, direction);
         if (Physics.Raycast(ray, out RaycastHit hit, 100f))
-        {   
-            hitpoint = hit.point;
+        {   if(hit.collider.tag != "Player")
+            {
+                hitpoint = hit.point;
+            }
+            else
+            {
+                print("Hit player");
+            }
+           
         }
 
         eye1.SetActive(true);

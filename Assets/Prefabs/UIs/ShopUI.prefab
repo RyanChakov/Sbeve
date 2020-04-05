@@ -552,7 +552,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015258789, y: -81.075294}
+  m_AnchoredPosition: {x: 0.000015258789, y: -13.739868}
   m_SizeDelta: {x: 92, y: 92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1314282845510450763
@@ -3301,7 +3301,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Bow
+  m_text: 'Laser Gun
 
 '
   m_isRightToLeft: 0
@@ -3372,10 +3372,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 3441390840906266096}
-    characterCount: 4
+    characterCount: 10
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 1
+    spaceCount: 2
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -4510,7 +4510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3441390841065532399}
   m_Layer: 5
-  m_Name: Bow
+  m_Name: LaserGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6321,7 +6321,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Let you hit things from range
+  m_text: Lets you hit things from range
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6390,7 +6390,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.92810684, w: 0}
   m_textInfo:
     textComponent: {fileID: 3441390841323598938}
-    characterCount: 29
+    characterCount: 30
     spriteCount: 0
     spaceCount: 5
     wordCount: 6
@@ -10094,8 +10094,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3441390841096653285}
   m_HandleRect: {fileID: 3441390841096653286}
   m_Direction: 3
-  m_Value: 1
-  m_Size: 0.38146013
+  m_Value: 0.5847351
+  m_Size: 0.38146007
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -14769,7 +14769,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 24db969a747c36149ab6dd4808beffcd, type: 3}
+  m_Texture: {fileID: 2800000, guid: c79fa13f49a8c3447a61031d064db316, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\fixlight.cs" />
+    <Compile Include="Assets\LightningBolt\LightningBoltScript.cs" />
     <Compile Include="Assets\OnlineAssests\Libraries\FastNoise\FastNoise.cs" />
     <Compile Include="Assets\OnlineAssests\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
     <Compile Include="Assets\OnlineAssests\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CreateSinShapedLineStrip.cs" />
@@ -114,6 +115,7 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials\install-a-new-font.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Fonts &amp; Materials\ffonts.net.txt" />
+    <None Include="Assets\LightningBolt\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\OnlineAssests\VolumetricLines\BuiltInRenderPipeline\Shaders\SingleLine-LightSaber.shader" />
     <None Include="Assets\OnlineAssests\VolumetricLines\BuiltInRenderPipeline\Shaders\LineStrip-LightSaber.shader" />

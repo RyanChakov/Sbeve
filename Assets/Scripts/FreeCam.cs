@@ -8,7 +8,7 @@ public class FreeCam : MonoBehaviour
     public Skeleton SKL;
     public float freeLookSensitivity = 3f;
     public Animator Robot;
-    public bool looking = true;
+    public bool looking = true, laser = false;
     public AudioSource attackSkelSound, attackAir;
     int layerMask = 1 << 14;
     void Update()
@@ -16,30 +16,31 @@ public class FreeCam : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
-
-            Robot.Play("RobotArmature|Robot_Punch");
-
-            //Spammable
-            /*
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), 4, layerMask))
+            if (!laser)
             {
-                attack();
-                attackSkelSound.Play();
-            }
-            */
-            // Not spammable
-            
-            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), 4, layerMask) && !attackSkelSound.isPlaying)
-            {
-                attack();
-                attackSkelSound.Play();
-            }
-            else if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), 4, layerMask))
-            {
-                attackAir.Play();
+                Robot.Play("RobotArmature|Robot_Punch");
+
+                //Spammable
+                /*
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), 4, layerMask))
+                {
+                    attack();
+                    attackSkelSound.Play();
+                }
+                */
+                // Not spammable
+
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), 4, layerMask) && !attackSkelSound.isPlaying)
+                {
+                    attack();
+                    attackSkelSound.Play();
+                }
+                else if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), 4, layerMask))
+                {
+                    attackAir.Play();
+                }
             }
 
-            
         }
 
 
@@ -70,7 +71,7 @@ public class FreeCam : MonoBehaviour
 
             float newRotationX = player.transform.localEulerAngles.y + Input.GetAxis("Mouse X") * freeLookSensitivity;
             float newRotationY = this.transform.localEulerAngles.x - Input.GetAxis("Mouse Y") * freeLookSensitivity;
-
+            print("THIS IS THE ROTATION" + newRotationX);
             player.transform.localEulerAngles = new Vector3(0, newRotationX, 0f);
             // -90 to 90
 
