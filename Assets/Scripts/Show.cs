@@ -142,6 +142,7 @@ public class Show : MonoBehaviour
         if (cost <= money.totalmoney)
         {
             money.Buy(cost);
+            FC.laser = true;
             LaserHand.SetActive(true);
             HandR.SetActive(false);
             Audio(purchase);

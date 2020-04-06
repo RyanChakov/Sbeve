@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\Destroy2.cs" />
     <Compile Include="Assets\Scripts\Driller.cs" />
     <Compile Include="Assets\Scripts\FreeCam.cs" />
+    <Compile Include="Assets\Scripts\LaserGun.cs" />
     <Compile Include="Assets\Scripts\LookupTables.cs" />
     <Compile Include="Assets\Scripts\MarchingCubes.cs" />
     <Compile Include="Assets\Scripts\MaybeHandLaser.cs" />

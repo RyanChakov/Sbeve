@@ -2,7 +2,7 @@
 
 public class FreeCam : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject player, lightning;
     public GameObject head;
     public float movementSpeed = 10f;
     public Skeleton SKL;
@@ -13,7 +13,7 @@ public class FreeCam : MonoBehaviour
     int layerMask = 1 << 14;
     void Update()
     {
-
+       
         if (Input.GetMouseButtonDown(1))
         {
             if (!laser)
@@ -32,7 +32,7 @@ public class FreeCam : MonoBehaviour
 
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), 4, layerMask) && !attackSkelSound.isPlaying)
                 {
-                    attack();
+                    attack(1f);
                     attackSkelSound.Play();
                 }
                 else if (!Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), 4, layerMask))
@@ -40,9 +40,21 @@ public class FreeCam : MonoBehaviour
                     attackAir.Play();
                 }
             }
-
+            else if (laser)
+            {
+                lightning.SetActive(true);
+            
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), 150, layerMask))
+                {
+                    print("ATTACHSSS");
+                    attack(.5f);
+                }
+            }
         }
-
+        else if(!Input.GetMouseButton(1))
+        {
+           lightning.SetActive(false);
+        }
 
         var movementSpeed = this.movementSpeed;
 
@@ -71,7 +83,7 @@ public class FreeCam : MonoBehaviour
 
             float newRotationX = player.transform.localEulerAngles.y + Input.GetAxis("Mouse X") * freeLookSensitivity;
             float newRotationY = this.transform.localEulerAngles.x - Input.GetAxis("Mouse Y") * freeLookSensitivity;
-            print("THIS IS THE ROTATION" + newRotationX);
+            
             player.transform.localEulerAngles = new Vector3(0, newRotationX, 0f);
             // -90 to 90
 
@@ -111,12 +123,12 @@ public class FreeCam : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
     */
-    void attack()
+    void attack(float dmg)
     {
 
         if (SKL.SHelath != 0)
         {
-            SKL.SHelath -= 1f;
+            SKL.SHelath -= dmg;
         }
 
     }
