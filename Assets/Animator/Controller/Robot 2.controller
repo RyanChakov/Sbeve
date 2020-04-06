@@ -1670,7 +1670,7 @@ AnimatorStateMachine:
     m_Position: {x: 20.13623, y: 474.53436, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7331550359612226855}
-    m_Position: {x: 210, y: 160, z: 0}
+    m_Position: {x: 230, y: 160, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: 3363450266866007727}
@@ -2131,7 +2131,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WakeUp
-  m_Speed: 0.1
+  m_Speed: 0.3
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []

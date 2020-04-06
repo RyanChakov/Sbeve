@@ -22,6 +22,11 @@ public class moving : MonoBehaviour
     public GameObject[] Healthbars = new GameObject[10];
     public GameObject[] Shieldbars = new GameObject[10];
     public GameObject[] Fuelbars = new GameObject[10];
+
+    void Start()
+    {
+        Robot.SetBool("Start", false);
+    }
     void Update()
     {
         if (JetOn && fuelLevel == 10)
